@@ -6,9 +6,9 @@
 
 *** Update Time: 2020/05/19
 
-This repo is aimed to give you clear instructions on how to install packages in Arrch64(ARM) Platform, especially in Jetson family. All the packages have been tested on Jetson AGX Xavier and Jetson Nano.
+This repo is aimed to give you clear instructions on how to install packages in AArch64(ARM) Platform, especially in Jetson family. All the packages have been tested on Jetson AGX Xavier and Jetson Nano.
 
-*** Notes: the instructions below is for manual installation. For auto installation, you may find the installation script [HERE](https://github.com/yqlbu/jetson-install)
+*** Notes: the instructions below are for manual installation. For auto installation, you may find the installation script [HERE](https://github.com/yqlbu/jetson-install)
 
 ## Dependencies Installation
 Before performing any installation, you may need to install the following basic dependencies first.
@@ -27,12 +27,12 @@ Table of Contents
 
 * [Pytorch](#pytorch)
 * [Tensorflow](#tensorflow)
-* [LLVM](#llvm)
-* [Numba](#numba)
-* [ONNX_1.4.1](#onnx-1.4.1)
+* [LLVM](#LLVM)
+* [Numba](#Numba)
+* [ONNX](#onnx)
 * [Jetson-stats](#jetson-stats)
 * [Archiconda3](#archiconda3)
-* [OpenCV_4.1.1](#opencv-4.1.1)
+* [OpenCV](#opencv)
 * [Pycharm](#pycharm)
 * [Docker](#docker)
 
@@ -73,3 +73,72 @@ $ python3
 To install other versions of PyTorch and Torchvision, please visit site [HERE](https://forums.developer.nvidia.com/t/pytorch-for-jetson-nano-version-1-5-0-now-available/72048)
 
 <a name="pytorch"></a>
+
+Tensorflow
+----------
+
+Python 3.6 + JetPack4.4
+
+```shell script
+sudo apt-get install libhdf5-serial-dev hdf5-tools libhdf5-dev zlib1g-dev zip libjpeg8-dev liblapack-dev libblas-dev gfortran
+sudo apt-get install python3-pip
+sudo pip3 install -U pip
+sudo pip3 install -U pip testresources setuptools numpy==1.16.1 future==0.17.1 mock==3.0.5 h5py==2.9.0 keras_preprocessing==1.0.5 keras_applications==1.0.8 gast==0.2.2 futures protobuf pybind11
+# TF-2.x
+$ sudo pip3 install --pre --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v44 tensorflow
+# TF-1.15
+$ sudo pip3 install --pre --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v44 ‘tensorflow<2’
+```
+
+Python 3.6 + JetPack4.3
+
+```shell script
+$ sudo apt-get install libhdf5-serial-dev hdf5-tools libhdf5-dev zlib1g-dev zip libjpeg8-dev
+$ sudo apt-get install python3-pip
+$ sudo pip3 install -U pip
+$ sudo pip3 install -U numpy grpcio absl-py py-cpuinfo psutil portpicker six mock requests gast h5py astor termcolor protobuf keras-applications keras-preprocessing wrapt google-pasta
+# TF-2.x
+$ sudo pip3 install --pre --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v43 tensorflow==2.1.0+nv20.3
+# TF-1.15
+$ sudo pip3 install --pre --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v43 tensorflow==1.15.2+nv20.3
+```
+
+To install other versions of Tensorflow, checkout the sites below:  
+
+Jetson Xavier: [HERE](https://forums.developer.nvidia.com/t/official-tensorflow-for-jetson-agx-xavier/65523)
+
+Jetson Nano: [HERE](https://forums.developer.nvidia.com/t/official-tensorflow-for-jetson-nano/71770)
+
+<a name="tensorflow"></a>
+
+LLVM
+----
+
+LLVM v3.9 (Python3.6 + JetPack 4.3/4.4)
+
+```shell script
+$ sudo apt-get install llvm-3.9
+$ export LLVM_CONFIG=/usr/lib/llvm-3.9/bin/llvm-config
+$ cd ~
+$ wget https://github.com/numba/llvmlite/archive/v0.16.0.zip
+$ unzip v0.16.0.zip
+$ cd llvmlite-0.16.0
+$ sudo chmod 777 -R /usr/local/lib/python3.6/dist-packages/
+$ python3 setup.py install
+```
+
+<a name="LLVM"></a>
+
+Numba
+-----
+
+Numba v0.31 (Python3.6 + JetPack 4.3/4.4)
+
+*** Notes: Numba requires **LLVM** pre-built, so please check out the instructions for LLVM and have it installed before installing Numba.
+
+```shell script
+$ pip3 install numba==0.31 --user
+```
+
+<a name="Numba"></a>
+
