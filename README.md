@@ -134,7 +134,7 @@ Numba
 
 Numba v0.31 (Python3.6 + JetPack 4.3/4.4)
 
-*** Notes: Numba requires **LLVM** pre-built, so please check out the instructions for LLVM and have it installed before installing Numba.
+*** Notes: Numba requires **LLVM** pre-built, so please check out the instructions for [LLVM](#LLVM) and have it installed before installing Numba.
 
 ```shell script
 $ pip3 install numba==0.31 --user
