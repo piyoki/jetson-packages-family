@@ -216,6 +216,8 @@ $ ./install_opencv4.1.1_jetson.sh
 
 *** You may modify the script to install custom version of OpenCV
 
+<a name="opencv"></a>
+
 Pycharm
 -------
 
@@ -234,6 +236,8 @@ $ cd ~
 $ echo 'export PATH=/home/'$USER'/pycharm-2019.3.4/bin:$PATH' >> .bashrc
 ```
 
+<a name="pycharm"></a>
+
 Docker
 ------
 
@@ -245,3 +249,5 @@ $ sudo wget -qO- https://get.docker.com/ | sh
 $ sudo usermod -aG docker $USER
 $ sudo systemctl enable docker 
 ```
+
+<a name="docker"></a>
