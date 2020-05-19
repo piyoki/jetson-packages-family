@@ -27,10 +27,11 @@ Table of Contents
 
 * [Pytorch](#pytorch)
 * [Tensorflow](#tensorflow)
-* [LLVM](#LLVM)
-* [Numba](#Numba)
+* [LLVM](#llvm)
+* [Numba](#numba)
 * [ONNX](#onnx)
 * [Jetson-stats](#jetson-stats)
+* [VSCode](#vs-code-for-aarch64)
 * [Archiconda3](#archiconda3)
 * [OpenCV](#opencv)
 * [Pycharm](#pycharm)
@@ -142,3 +143,105 @@ $ pip3 install numba==0.31 --user
 
 <a name="Numba"></a>
 
+ONNX
+----
+
+ONNX v1.4.1 (Python3.6 + JetPack 4.3/4.4)
+
+```shell script
+$ sudo apt install protobuf-compiler libprotoc-dev
+$ pip install onnx==1.4.1
+```
+<a name="Numba"></a>
+
+Jetson Stats
+------------
+
+Jetson-stats is a package to monitoring and control your NVIDIA Jetson [Xavier NX, Nano, AGX Xavier, TX1, TX2] Works with all NVIDIA Jetson ecosystem.
+
+```shell script
+$ cd ~
+$ sudo -H pip install jetson-stats
+$ sudo -H pip install -U jetson-stats
+```
+
+<a name="jetson-stats"></a>
+
+VS Code for aarch64
+-------------------
+
+```shell script
+$ cd ~
+$ curl -s https://packagecloud.io/install/repositories/swift-arm/vscode/script.deb.sh | sudo bash
+$ sudo apt-get install -y code-oss
+```
+
+<a name="vs-code-for-aarch64"></a>
+
+Archiconda3
+-----------
+
+Archiconda3 is a distribution of conda for 64 bit ARM. Anaconda is a free and open-source distribution of the Python and R programming languages for scientific computing (data science, machine learning applications, large-scale data processing, predictive analytics, etc.), that aims to simplify package management and deployment. Like Virtualenv, Anaconda also uses the concept of creating environments so as to isolate different libraries and versions.
+
+```shell script
+$ cd ~
+$ wget https://github.com/Archiconda/build-tools/releases/download/0.2.3/Archiconda3-0.2.3-Linux-aarch64.sh
+$ sudo sh Archiconda3-0.2.3-Linux-aarch64.sh
+$ rm -rf Archiconda3-0.2.3-Linux-aarch64.sh
+$ cd ~
+$ sudo chown -R $USER archiconda3/
+$ export PATH=~/archiconda3/bin:$PATH
+$ conda config --add channels conda-forge
+$ conda -V
+```
+
+Please checkout site [HERE](https://github.com/yqlbu/archiconda3) for usage guide.
+
+<a name="archiconda3"></a>
+
+OpenCV
+------
+
+OpenCV v4.1.1 (Python2.7/3.6+ JetPack4.3/4.4)
+
+```shell script
+$ cd ~
+$ wget https://github.com/yqlbu/jetson-packages-family/releases/download/4.1.1/opencv_4.1.1.zip
+$ unzip opencv_4.1.1
+$ sudo chmod +x remove.sh
+$ sudo chmod +x install_opencv4.1.1_jetson.sh
+$ ./remove.sh
+$ ./install_opencv4.1.1_jetson.sh
+```
+
+*** You may modify the script to install custom version of OpenCV
+
+Pycharm
+-------
+
+PyCharm Professional
+
+PyCharm is an integrated development environment (IDE) used in computer programming, specifically for the Python language. It is developed by the Czech company JetBrains.
+
+```shell script
+$ cd ~
+$ sudo apt-get update && sudo apt-get install -y openjdk-8-jdk
+$ wget https://download.jetbrains.com/python/pycharm-professional-2019.3.4.tar.gz?_ga=2.42966822.2056165753.1586158936-1955479096.1586158936 -O pycharm-professional-2019.3.4.tar.gz
+$ tar -xzf pycharm-professional-2019.3.4.tar.gz && cd pycharm-2019.3.4/bin
+$ sudo chmod +x pycharm.sh && mv pycharm.sh pycharm
+$ sudo rm -rf pycharm-professional-2019.3.4.tar.gz
+$ cd ~
+$ echo 'export PATH=/home/'$USER'/pycharm-2019.3.4/bin:$PATH' >> .bashrc
+```
+
+Docker
+------
+
+Docker is basically a container engine which uses the Linux Kernel features like namespaces and control groups to create containers on top of an operating system and automates application deployment on the container. Docker uses Copy-on-write union file system for its backend storage.
+
+```shell script
+$ cd ~
+$ sudo wget -qO- https://get.docker.com/ | sh
+$ sudo usermod -aG docker $USER
+$ sudo systemctl enable docker 
+```
