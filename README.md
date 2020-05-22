@@ -250,6 +250,8 @@ $ cd ~
 $ echo 'export PATH=/home/'$USER'/pycharm-2019.3.4/bin:$PATH' >> .bashrc
 ```
 
+You may find other versions [HERE](https://www.jetbrains.com/pycharm/download/other.html)
+
 <a name="pycharm"></a>
 
 Docker
