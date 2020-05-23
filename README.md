@@ -36,6 +36,7 @@ Table of Contents
 * [OpenCV](#opencv)
 * [Pycharm](#pycharm)
 * [Docker](#docker)
+* [Dlib](#Dlib)
 
 Pytorch
 -------
@@ -267,3 +268,15 @@ $ sudo systemctl enable docker
 ```
 
 <a name="docker"></a>
+
+Dlib
+----
+
+```shell script
+$ cd ~
+$ wget https://raw.githubusercontent.com/yqlbu/face_recognizer/master/setup.sh
+$ sudo chmod +x setup.sh
+$ ./setup.sh
+```
+
+<a name="dlib"></a>
