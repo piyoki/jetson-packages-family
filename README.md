@@ -272,6 +272,10 @@ $ sudo systemctl enable docker
 Dlib
 ----
 
+DLib is an open source C++ library implementing a variety of machine learning algorithms, including classification, regression, clustering, data transformation, and structured prediction. ... K-Means clustering, Bayesian Networks, and many others.
+
+Dlib v19.18
+
 ```shell script
 $ cd ~
 $ wget https://raw.githubusercontent.com/yqlbu/face_recognizer/master/setup.sh
