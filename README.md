@@ -209,7 +209,6 @@ OpenCV v4.1.1 (Python2.7/3.6+ JetPack4.3/4.4)
 $ cd ~
 $ wget https://raw.githubusercontent.com/yqlbu/jetson-install/master/install_opencv4.1.1_jetson.sh
 $ wget https://raw.githubusercontent.com/yqlbu/jetson-install/master/remove.sh
-$ unzip opencv_4.1.1
 $ sudo chmod +x remove.sh
 $ sudo chmod +x install_opencv4.1.1_jetson.sh
 $ ./remove.sh
