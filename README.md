@@ -49,7 +49,7 @@ PyTorch v1.4.0 (JetPack 4.2 / 4.3 / 4.4)
 Python 3.6 - torch-1.4.0-cp36-cp36m-linux_aarch64.whl
 
 ```bash
-$ wget https://nvidia.box.com/shared/static/ncgzus5o23uck9i5oth2n8n06k340l6k.whl -O torch-1.4.0-cp36-cp36m-linux_aarch64.whl
+$ wget https://nvidia.box.com/shared/static/c3d7vm4gcs9m728j6o5vjay2jdedqb55.whl -O torch-1.4.0-cp36-cp36m-linux_aarch64.whl
 $ sudo apt-get install python3-pip libopenblas-base libopenmpi-dev 
 $ pip3 install Cython
 $ pip3 install numpy torch-1.4.0-cp36-cp36m-linux_aarch64.whl
@@ -61,7 +61,7 @@ Torchvision v0.5.0 (compatible with PyTorch v1.4.0)
 $ sudo apt-get install libjpeg-dev zlib1g-dev
 $ git clone --branch v0.5.0 https://github.com/pytorch/vision torchvision
 $ cd torchvision
-$ sudo python setup.py install
+$ sudo python3 setup.py install
 $ cd ../
 $ pip install 'pillow<7' # not needed for torchvision v0.5.0+
 ```
