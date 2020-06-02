@@ -51,7 +51,7 @@ Table of Contents
 Pytorch
 -------
 
-PyTorch v1.4.0 (JetPack 4.2 / 4.3 / 4.4)
+PyTorch v1.4.0 (JetPack 4.4)
 
 
 Python 3.6 - torch-1.4.0-cp36-cp36m-linux_aarch64.whl
