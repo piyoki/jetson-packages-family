@@ -216,12 +216,11 @@ OpenCV v4.1.1 (Python2.7/3.6+ JetPack4.3/4.4)
 
 ```bash
 $ cd ~
-$ wget https://raw.githubusercontent.com/yqlbu/jetson-install/master/install_opencv4.1.1_jetson.sh
-$ wget https://raw.githubusercontent.com/yqlbu/jetson-install/master/remove.sh
-$ sudo chmod +x remove.sh
-$ sudo chmod +x install_opencv4.1.1_jetson.sh
-$ ./remove.sh
-$ ./install_opencv4.1.1_jetson.sh
+# purge old-version
+$ bash <(wget -qO- https://github.com/yqlbu/jetson-packages-family/raw/master/OpenCV/remove.sh)
+# install
+$ bash <(wget -qO- https://github.com/yqlbu/jetson-packages-family/raw/master/OpenCV/install_opencv4.1.1_jetson.sh)
+
 ```
 
 *** You may modify the script to install custom version of OpenCV
