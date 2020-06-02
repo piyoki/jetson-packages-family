@@ -22,6 +22,14 @@ $ sudo apt-get install -y python3-opencv
 $ sudo apt-get install -y libcanberra-gtk0 libcanberra-gtk-module
 ```
 
+## Set CUDA Path
+
+If you have not set CUDA Path yet, you might need to do so.
+
+```bash
+$ bash <(https://github.com/yqlbu/jetson-packages-family/raw/master/set_cuda.sh)
+```
+
 Table of Contents
 -----------------
 
