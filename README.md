@@ -225,6 +225,10 @@ $ bash <(wget -qO- https://github.com/yqlbu/jetson-packages-family/raw/master/Op
 
 *** You may modify the script to install custom version of OpenCV
 
+```bash
+$ wget https://github.com/yqlbu/jetson-packages-family/raw/master/OpenCV/install_opencv4.1.1_jetson.sh
+```
+
 <a name="opencv"></a>
 
 Pycharm
