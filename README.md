@@ -203,6 +203,7 @@ $ sudo chown -R $USER archiconda3/
 $ export 'PATH=~/archiconda3/bin:$PATH' >> ~/.bashrc
 $ conda config --add channels conda-forge
 $ conda -V
+$ export "PATH=/bin:/usr/bin:$PATH" >> ~/.bashrc
 ```
 
 Please checkout site [HERE](https://github.com/yqlbu/archiconda3) for usage guide.
