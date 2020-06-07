@@ -17,15 +17,15 @@ echo -e "
 "
 
 param (){
-read -p ' ->  Put your Jetson model # here: ' NUM
+read -p '[BASH]  Put your Jetson model # here: ' NUM
 if [ "$NUM" == '1' ] || [ "$NUM" == '2' ] || [ "$NUM" == '3' ]
 then
-	echo -e " ->  You choose #$NUM."
-	read -p ' ->  Do you wish to continue? (y/n) ' VAL
+	echo -e "[BASH]  You choose #$NUM."
+	read -p '[BASH]  Do you wish to continue? (y/n) ' VAL
 	#if y continue, else done
 	if [ "$VAL" == "y" ]
 	then
-		echo -e " ->  Installation will start in 3 seconds."
+		echo -e "[BASH]  Installation will start in 3 seconds."
 		sleep 3
  		# Jetson Nano
 		if [ "$NUM" == '1' ]; then
@@ -39,10 +39,10 @@ then
 		fi
 		start
 	else
-		echo -e " ->  Installation ends..."
+		echo "[BASH]  Installation ends..."
 	fi
 else
-	echo -e " ->  Please put the right # "
+	echo "[BASH]  Please put the right # "
 	param
 fi
 }
@@ -55,11 +55,11 @@ CLEANUP=true
 PACKAGE_OPENCV="-D CPACK_BINARY_DEB=ON"
 CMAKE_INSTALL_PREFIX=$INSTALL_DIR
 
-echo -e " ->  Installation start!"
+echo "[BASH]  Installation start!"
 sleep 2
 
 # Print out the current configuration
-echo "Build configuration: "
+echo "[BASH]  Build configuration: "
 echo " NVIDIA Jetson Nano"
 echo " OpenCV binaries will be installed in: $CMAKE_INSTALL_PREFIX"
 echo " OpenCV Source will be installed in: $OPENCV_SOURCE_DIR"
@@ -70,7 +70,7 @@ else
 fi
 
 if [ $DOWNLOAD_OPENCV_EXTRAS == "YES" ] ; then
- echo "Also downloading opencv_extras"
+ echo "[BASH]  Also downloading opencv_extras"
 fi
 
 # Repository setup
@@ -78,7 +78,7 @@ sudo apt-add-repository universe
 sudo apt-get update
 # Download dependencies for the desired configuration
 cd $WHEREAMI
-echo " ->  Install dependencies ..."
+echo "[BASH]  Install dependencies ..."
 sleep 2
 sudo apt-get install -y \
     build-essential \
@@ -117,7 +117,7 @@ sudo apt-get install -y python3-dev python3-numpy python3-py python3-pytest
 # GStreamer support
 sudo apt-get install -y libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev 
 
-echo " ->  Download sources ..."
+echo "[BASH]  Download sources ..."
 sleep 2
 
 cd $OPENCV_SOURCE_DIR
@@ -125,7 +125,7 @@ git clone --branch "$OPENCV_VERSION" https://github.com/opencv/opencv.git
 git clone --branch "$OPENCV_VERSION" https://github.com/opencv/opencv_contrib.git
 
 if [ $DOWNLOAD_OPENCV_EXTRAS == "YES" ] ; then
- echo "Installing opencv_extras"
+ echo "[BASH]  Installing opencv_extras"
  # This is for the test data
  cd $OPENCV_SOURCE_DIR
  git clone https://github.com/opencv/opencv_extra.git
@@ -142,7 +142,7 @@ cd $OPENCV_SOURCE_DIR/opencv
 mkdir build
 cd build
 
-echo " ->  Build from sources ..."
+echo "[BASH]  Build from sources ..."
 sleep 2
 
 echo $PWD
@@ -171,66 +171,66 @@ time cmake -D CMAKE_BUILD_TYPE=RELEASE \
 
 
 if [ $? -eq 0 ] ; then
-  echo "CMake configuration make successful"
+  echo "[BASH]  CMake configuration make successful"
 else
   # Try to make again
-  echo "CMake issues " >&2
-  echo "Please check the configuration being used"
+  echo "[BASH]  CMake issues " >&2
+  echo "[BASH]  Please check the configuration being used"
   exit 1
 fi
 
 # Consider the MAXN performance mode if using a barrel jack on the Nano
 time make -j$NUM_JOBS
 if [ $? -eq 0 ] ; then
-  echo "OpenCV make successful"
+  echo "[BASH]  OpenCV make successful"
 else
   # Try to make again; Sometimes there are issues with the build
   # because of lack of resources or concurrency issues
-  echo "Make did not build " >&2
-  echo "Retrying ... "
+  echo "[BASH]  Make did not build " >&2
+  echo "[BASH]  Retrying ... "
   # Single thread this time
   make
   if [ $? -eq 0 ] ; then
-    echo "OpenCV make successful"
+    echo "[BASH]  OpenCV make successful"
   else
     # Try to make again
-    echo "Make did not successfully build" >&2
-    echo "Please fix issues and retry build"
+    echo "[BASH]  Make did not successfully build" >&2
+    echo "[BASH]  Please fix issues and retry build"
     exit 1
   fi
 fi
 
-echo "Installing ... "
+echo "[BASH]  Installing ... "
 sudo make install
 sudo ldconfig
 if [ $? -eq 0 ] ; then
-   echo "OpenCV installed in: $CMAKE_INSTALL_PREFIX"
+   echo "[BASH]  OpenCV installed in: $CMAKE_INSTALL_PREFIX"
 else
-   echo "There was an issue with the final installation"
+   echo "[BASH]  There was an issue with the final installation"
    exit 1
 fi
 
 # If PACKAGE_OPENCV is on, pack 'er up and get ready to go!
 # We should still be in the build directory ...
 if [ "$PACKAGE_OPENCV" != "" ] ; then
-   echo "Starting Packaging"
+   echo "[BASH]  Starting Packaging"
    sudo ldconfig  
    time sudo make package -j$NUM_JOBS
    if [ $? -eq 0 ] ; then
-     echo "OpenCV make package successful"
+     echo "[BASH]  OpenCV make package successful"
    else
      # Try to make again; Sometimes there are issues with the build
      # because of lack of resources or concurrency issues
-     echo "Make package did not build " >&2
-     echo "Retrying ... "
+     echo "[BASH]  Make package did not build " >&2
+     echo "[BASH]  Retrying ... "
      # Single thread this time
      sudo make package
      if [ $? -eq 0 ] ; then
-       echo "OpenCV make package successful"
+       echo "[BASH]  OpenCV make package successful"
      else
        # Try to make again
-       echo "Make package did not successfully build" >&2
-       echo "Please fix issues and retry build"
+       echo "[BASH]  Make package did not successfully build" >&2
+       echo "[BASH]  Please fix issues and retry build"
        exit 1
      fi
    fi
@@ -243,13 +243,13 @@ sudo apt-get install -y libopencv-core-dev
 # check installation
 IMPORT_CHECK="$(python3 -c "import cv2 ; print(cv2.__version__)")"
 if [[ $IMPORT_CHECK != *$OPENCV_VERSION* ]]; then
-  echo "There was an error loading OpenCV in the Python sanity test."
-  echo "The loaded version does not match the version built here."
-  echo "Please check the installation."
-  echo "The first check should be the PYTHONPATH environment variable."
+  echo "[BASH]  There was an error loading OpenCV in the Python sanity test."
+  echo "[BASH]  The loaded version does not match the version built here."
+  echo "[BASH]  Please check the installation."
+  echo "[BASH]  The first check should be the PYTHONPATH environment variable."
 fi
 
-echo " ->  Installation completed ..."
+echo "[BASH]    Installation completed ..."
 sleep 2
 
 }
