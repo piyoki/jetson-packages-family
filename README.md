@@ -210,6 +210,8 @@ $ source ~/.bashrc
 $ jupyter lab -V
 ```
 
+Usage Guide: [https://github.com/yqlbu/jetson_lab](https://github.com/yqlbu/jetson_lab)
+
 <a name="jupyter-lab"></a>
 
 ### Pillow
@@ -458,3 +460,8 @@ $ sudo apt-get install qt5-default qtcreator -y
 $ sudo apt-get install pyqt5*
 $ sudo apt install python3-pyqt5.qtsql
 ```
+
+License
+-------
+
+[MIT License]()
