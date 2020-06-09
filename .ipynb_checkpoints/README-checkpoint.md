@@ -8,7 +8,7 @@
 
 This repo aims to give you clear instructions on how to install packages in AArch64(ARM) Platform, especially in Jetson family. All the packages have been tested on Jetson AGX Xavier and Jetson Nano.
 
-*** Notes: the instructions below are for manual installation. For auto installation, you may find the installation script [HERE](https://github.com/yqlbu/jetson-install)
+
 
 ## Dependencies Installation
 Before performing any installation, you may need to install the following basic dependencies.
