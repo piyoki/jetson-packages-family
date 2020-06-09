@@ -1,5 +1,10 @@
 # Install-Packages-Jetson-ARM-Family
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![](https://img.shields.io/static/v1?label=Device&message=Jetson(ARMv8)&color=orange)
+![](https://img.shields.io/static/v1?label=Python&message=3.6&color=green)
+
+
 *** Copy Right 2020 Kevin Yu. All rights reserved.
 
 *** Author: Kevin Yu
