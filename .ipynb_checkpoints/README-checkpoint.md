@@ -86,7 +86,7 @@ $ git clone --branch v0.5.0 https://github.com/pytorch/vision torchvision
 $ cd torchvision
 $ sudo python3 setup.py install
 $ cd ../
-$ pip install 'pillow<7' # not needed for torchvision v0.5.0+
+$ pip3 install 'pillow<7' # not needed for torchvision v0.5.0+
 ```
 
 Verfication
