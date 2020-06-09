@@ -4,7 +4,7 @@
 
 *** Author: Kevin Yu
 
-*** Update Time: 2020/06/02
+*** Update Time: 2020/06/09
 
 This repo aims to give you clear instructions on how to install packages in AArch64(ARM) Platform, especially in Jetson family. All the packages have been tested on Jetson AGX Xavier and Jetson Nano.
 
