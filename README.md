@@ -12,7 +12,7 @@ This repo aims to give you clear instructions on how to install packages in AArc
 
 ## Dependencies Installation
 Before performing any installation, you may need to install the following basic dependencies.
-```shell script
+```bash
 $ sudo apt-get install -y nano curl 
 $ sudo apt-get install -y python3-pip python3-dev
 $ sudo apt-get install -y python-pip
@@ -20,6 +20,14 @@ $ sudo apt-get install -y python-setuptools
 $ sudo apt-get install -y python3-setuptools
 $ sudo apt-get install -y python3-opencv
 $ sudo apt-get install -y libcanberra-gtk0 libcanberra-gtk-module
+```
+
+Python-pip
+```bash
+$ pip3 install -U pip
+$ pip install -U pip
+$ pip3 install setuptools wheel
+$ pip install setuptools wheel cython
 ```
 
 ## Set CUDA Path
@@ -36,10 +44,11 @@ Table of Contents
 
 * [Pytorch](#pytorch)
 * [Tensorflow](#tensorflow)
+* [Machine Learning](#machine-learning)
 * [LLVM](#llvm)
 * [Numba](#numba)
 * [ONNX](#onnx)
-* [Jetson-stats](#jetson-stats)
+* [Jetson Stats](#jetson-stats)
 * [VSCode](#vs-code-for-aarch64)
 * [Archiconda3](#archiconda3)
 * [OpenCV](#opencv)
@@ -121,6 +130,109 @@ Jetson Xavier: [HERE](https://forums.developer.nvidia.com/t/official-tensorflow-
 Jetson Nano: [HERE](https://forums.developer.nvidia.com/t/official-tensorflow-for-jetson-nano/71770)
 
 <a name="tensorflow"></a>
+
+Machine Learning
+----------------
+
+* [Scikit Learn](#scikit-learn)
+* [Scipy](#scipy)
+* [Matplotlib](#matplotlib)
+* [Pycuda](pycuda)
+* [Jupyter Lab](#jupyter-lab)
+* [Pillow](#pillow)
+* [Pandas](#pandas)
+* [Numpy](#numpy)
+
+### Scikit-learn
+
+Scikit-learn v0.23.1(Latest)
+
+```bash
+$ pip3 install scikit-learn
+```
+
+<a name="scikit-learn"></a>
+
+### Scipy
+
+Scipy v1.4.1(Latest)
+
+```bash
+$ apt-get install libatlas-base-dev gfortran
+$ pip3 install -U scipy --user
+```
+
+<a name="scipy"></a>
+
+### Matplotlib
+
+Matplotlib v3.2.1(Latest)
+
+```bash
+$ sudo apt install libfreetype6-dev
+$ pip3 install -U matplotlib --user
+```
+
+<a name="matplotlib"></a>
+
+### Pycuda
+
+Pycuda v2019.1.2(Latest)
+
+```bash
+pip3 install -U pycuda --user
+```
+
+<a name="pycuda"></a>
+
+### Jupyter Lab
+
+JupyterLab v2.1.4(Latest)
+
+```bash
+# install jupyter
+$ pip3 install jupyterlab
+$ pip3 install --upgrade --force jupyter-console
+
+# export environment path
+$ echo 'export PATH=$PATH:~/.local/bin' >> ~/.bashrc
+$ source ~/.bashrc
+
+# check installation version
+$ jupyter lab -V
+```
+
+<a name="jupyter-lab"></a>
+
+### Pillow
+
+Pillow v5.1.0(Latest)
+
+```bash
+$ pip3 install -U pillow --user
+```
+
+<a name="pillow"></a>
+
+### Pandas
+
+Pandas v1.0.4(Latest)
+
+```bash
+$ pip3 install -U pandas --user
+```
+
+<a name="pandas"></a>
+
+### Numpy
+
+Numpy v1.18.5(Latest)
+
+```bash
+pip3 install -U numpy --user
+```
+
+<a name="numpy"></a>
 
 LLVM
 ----
