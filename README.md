@@ -464,4 +464,4 @@ $ sudo apt install python3-pyqt5.qtsql
 License
 -------
 
-[MIT License]()
+[MIT License](https://github.com/yqlbu/jetson-packages-family/blob/master/LICENSE)
