@@ -134,6 +134,8 @@ Jetson Nano: [HERE](https://forums.developer.nvidia.com/t/official-tensorflow-fo
 Machine Learning
 ----------------
 
+Python3 v3.6.9
+
 * [Scikit Learn](#scikit-learn)
 * [Scipy](#scipy)
 * [Matplotlib](#matplotlib)
