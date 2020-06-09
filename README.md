@@ -142,6 +142,7 @@ Machine Learning
 * [Pillow](#pillow)
 * [Pandas](#pandas)
 * [Numpy](#numpy)
+* [Seaborn](#seaborn)
 
 ### Scikit-learn
 
@@ -229,10 +230,18 @@ $ pip3 install -U pandas --user
 Numpy v1.18.5(Latest)
 
 ```bash
-pip3 install -U numpy --user
+$ pip3 install -U numpy --user
 ```
 
 <a name="numpy"></a>
+
+### Seaborn
+
+Seaborn v0.10.1(Latest)
+
+```bash
+$ pip3 install -U seaborn --user
+```
 
 LLVM
 ----
