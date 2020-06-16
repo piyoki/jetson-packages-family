@@ -412,7 +412,22 @@ $ cd ~
 $ sudo wget -qO- https://get.docker.com/ | sh
 $ sudo usermod -aG docker $USER
 $ sudo systemctl enable docker 
+$ sudo systemctl status docker 
 ```
+
+### Docker-compose
+
+Docker-compose v1.26.0(Latest)
+
+```
+$ sudo apt-get update
+$ sudo apt-get install -y python python-pip libffi-dev libssl-dev
+$ sudo pip install docker-compose
+$ docker-compose -v
+
+```
+
+
 
 <a name="docker"></a>
 
