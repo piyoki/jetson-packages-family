@@ -498,6 +498,8 @@ Nomachine ARMv8 (compatible with Jetson Devices)
 
 NoMachine is a free, cross-platform, serverless remot e desktop tool that lets you setup a remote desktop server on your computer using the NX video protocol. The client can be used to connect to the server from anywhere in the world.
 
+Official Website: [HERE](https://www.nomachine.com/download/download&id=111&s=ARM)
+
 ```bash
 $ cd ~
 $ wget https://download.nomachine.com/download/6.10/Arm/nomachine_6.10.12_1_arm64.deb
