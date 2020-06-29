@@ -59,10 +59,11 @@ Table of Contents
 * [OpenCV](#opencv)
 * [Pycharm](#pycharm)
 * [Docker](#docker)
-* [Dlib](#Dlib)
+* [Dlib](#dlib)
 * [LabelImg](#labelimg)
 * [Qt5](#qt5)
-* [Kubernetes](#Kubernetes)
+* [Kubernetes](#kubernetes)
+* [Nomachine](#nomachine)
 
 Pytorch
 -------
@@ -488,8 +489,23 @@ Kubernetes
 
 Installation and usage guide is available at [HERE](https://hikariai.net/cloud/kubernetes-edge-deployment/)
 
-<a name="k3s"></a>
+<a name="kubernetes"></a>
 
+Nomachine
+---------
+
+Nomachine ARMv8 (compatible with Jetson Devices)
+
+NoMachine is a free, cross-platform, serverless remot e desktop tool that lets you setup a remote desktop server on your computer using the NX video protocol. The client can be used to connect to the server from anywhere in the world.
+
+```bash
+$ cd ~
+$ wget https://download.nomachine.com/download/6.10/Arm/nomachine_6.10.12_1_arm64.deb
+$ sudo dpkg -i nomachine_6.10.12_1_arm64.deb
+$ rm rf nomachine_6.10.12_1_arm64.deb
+```
+
+<a name="nomachine"></a>
 
 License
 -------
