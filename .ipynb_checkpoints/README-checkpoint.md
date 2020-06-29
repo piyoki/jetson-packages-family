@@ -62,7 +62,7 @@ Table of Contents
 * [Dlib](#Dlib)
 * [LabelImg](#labelimg)
 * [Qt5](#qt5)
-* [K3S](#Kubernetes)
+* [Kubernetes](#Kubernetes)
 
 Pytorch
 -------
