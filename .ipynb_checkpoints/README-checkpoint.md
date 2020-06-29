@@ -9,9 +9,9 @@
 
 *** Author: Kevin Yu
 
-*** Update Time: 2020/06/09
+*** Update Time: 2020/06/28
 
-This repo aims to give you clear instructions on how to install packages in AArch64(ARM) Platform, especially in Jetson family. All the packages have been tested on Jetson AGX Xavier and Jetson Nano.
+This repo aims to give you clear instructions on how to install packages on AArch64(ARM) Platform, especially in Jetson family. All the packages have been tested on Jetson AGX Xavier and Jetson Nano.
 
 
 
@@ -62,6 +62,7 @@ Table of Contents
 * [Dlib](#Dlib)
 * [LabelImg](#labelimg)
 * [Qt5](#qt5)
+* [K3S](#Kubernetes)
 
 Pytorch
 -------
@@ -475,6 +476,20 @@ $ sudo apt-get install qt5-default qtcreator -y
 $ sudo apt-get install pyqt5*
 $ sudo apt install python3-pyqt5.qtsql
 ```
+
+<a name="qt5"></a>
+
+Kubernetes
+----------
+
+[Kubernetes](https://kubernetes.io/docs/concepts/architecture/) has rapidly become a key ingredient in edge computing. With Kubernetes, companies can run containers at the edge in a way that maximizes resources, makes testing easier, and allows DevOps teams to move faster and more effectively as these organizations consume and analyze more data in the field.
+
+[K3S](https://rancher.com/blog/2019/why-k3s-is-the-future-of-k8s-at-the-edge/) is a lightweight Kubernetes distribution developed by Rancher Labs, perfect for Edge Computing use cases where compute resources may be somewhat limited.
+
+Installation and usage guide is available at [HERE](https://hikariai.net/cloud/kubernetes-edge-deployment/)
+
+<a name="k3s"></a>
+
 
 License
 -------
