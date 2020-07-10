@@ -40,7 +40,7 @@ $ pip install setuptools wheel cython
 If you have not set CUDA Path yet, you might need to do so.
 
 ```bash
-$ bash <(https://github.com/yqlbu/jetson-packages-family/raw/master/set_cuda.sh)
+$ bash <(wget -qO- https://github.com/yqlbu/jetson-packages-family/raw/master/set_cuda.sh)
 ```
 
 
