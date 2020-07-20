@@ -325,16 +325,15 @@ Archiconda3
 Archiconda3 is a distribution of conda for 64 bit ARM. Anaconda is a free and open-source distribution of the Python and R programming languages for scientific computing (data science, machine learning applications, large-scale data processing, predictive analytics, etc.), that aims to simplify package management and deployment. Like Virtualenv, Anaconda also uses the concept of creating environments so as to isolate different libraries and versions.
 
 ```bash
-$ cd ~
+$ cd ${HOME}
 $ wget https://github.com/Archiconda/build-tools/releases/download/0.2.3/Archiconda3-0.2.3-Linux-aarch64.sh
 $ sudo sh Archiconda3-0.2.3-Linux-aarch64.sh
 $ rm -rf Archiconda3-0.2.3-Linux-aarch64.sh
 $ cd ~
 $ sudo chown -R $USER archiconda3/
-$ export 'PATH=~/archiconda3/bin:$PATH' >> ~/.bashrc
+$ export PATH=~/archiconda3/bin:$PATH
 $ conda config --add channels conda-forge
 $ conda -V
-$ export "PATH=/bin:/usr/bin:$PATH" >> ~/.bashrc
 ```
 
 Please checkout site [HERE](https://github.com/yqlbu/archiconda3) for usage guide.
