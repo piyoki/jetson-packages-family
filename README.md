@@ -338,6 +338,14 @@ $ conda update conda
 $ conda -V
 ```
 
+To prevent conda from activating the base environment by default
+
+```bash
+$ conda config --set auto_activate_base false
+$ export "PATH=/bin:/usr/bin:$PATH" >> ~/.bashrc
+$ source ~/.bashrc
+```
+
 Please checkout site [HERE](https://github.com/yqlbu/archiconda3) for usage guide.
 
 <a name="archiconda3"></a>
