@@ -334,6 +334,8 @@ $ sudo chown -R $USER archiconda3/
 $ export "PATH=~/archiconda3/bin:$PATH" >> ~/.bashrc
 $ conda config --add channels conda-forge
 $ conda -V
+$ conda update conda
+$ conda -V
 ```
 
 Please checkout site [HERE](https://github.com/yqlbu/archiconda3) for usage guide.
