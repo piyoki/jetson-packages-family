@@ -9,7 +9,7 @@
 
 *** Author: Kevin Yu
 
-*** Update Time: 2020/06/28
+*** Update Time: 2020/07/30
 
 This repo aims to give you clear instructions on how to install packages on AArch64(ARM) Platform, especially in Jetson family. All the packages have been tested on Jetson AGX Xavier and Jetson Nano.
 
@@ -80,16 +80,16 @@ Table of Contents
 Pytorch
 -------
 
-PyTorch v1.4.0 (JetPack 4.4)
+PyTorch v1.5.0 (JetPack 4.4)
 
 
-Python 3.6 - torch-1.4.0-cp36-cp36m-linux_aarch64.whl
+Python 3.6 - torch-1.5.0-cp36-cp36m-linux_aarch64.whl
 
 ```bash
-$ wget https://nvidia.box.com/shared/static/c3d7vm4gcs9m728j6o5vjay2jdedqb55.whl -O torch-1.4.0-cp36-cp36m-linux_aarch64.whl
+$ wget https://nvidia.box.com/shared/static/3ibazbiwtkl181n95n9em3wtrca7tdzp.whl -O torch-1.5.0-cp36-cp36m-linux_aarch64.whl
 $ sudo apt-get install python3-pip libopenblas-base libopenmpi-dev 
 $ pip3 install Cython
-$ pip3 install numpy torch-1.4.0-cp36-cp36m-linux_aarch64.whl
+$ pip3 install numpy torch-1.5.0-cp36-cp36m-linux_aarch64.whl
 ```
 
 Torchvision v0.5.0 (compatible with PyTorch v1.4.0)
@@ -119,12 +119,12 @@ Tensorflow
 Python 3.6 + JetPack4.4
 
 ```bash
-$ sudo apt-get install libhdf5-serial-dev hdf5-tools libhdf5-dev zlib1g-dev zip libjpeg8-dev liblapack-dev libblas-dev gfortran
-$ sudo apt-get install python3-pip
-$ sudo pip3 install -U pip
-$ sudo pip3 install -U pip testresources setuptools numpy==1.16.1 future==0.17.1 mock==3.0.5 h5py==2.9.0 keras_preprocessing==1.0.5 keras_applications==1.0.8 gast==0.2.2 futures protobuf pybind11
+sudo apt-get install libhdf5-serial-dev hdf5-tools libhdf5-dev zlib1g-dev zip libjpeg8-dev liblapack-dev libblas-dev gfortran
+sudo apt-get install python3-pip
+sudo pip3 install -U pip
+sudo pip3 install -U pip testresources setuptools numpy==1.16.1 future==0.17.1 mock==3.0.5 h5py==2.9.0 keras_preprocessing==1.0.5 keras_applications==1.0.8 gast==0.2.2 futures protobuf pybind11
 # TF-2.x
-$ sudo pip3 install --pre --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v44 tensorflow
+$ sudo pip3 install --pre --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v44 tensorflow==2.2.0+nv20.6
 # TF-1.15
 $ sudo pip3 install --pre --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v44 ‘tensorflow<2’
 ```
