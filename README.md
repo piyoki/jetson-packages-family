@@ -38,8 +38,21 @@ $ pip install setuptools wheel cython
 
 If you have not set CUDA Path yet, you might need to do so.
 
+Setup with script
+
 ```bash
 $ bash <(wget -qO- https://github.com/yqlbu/jetson-packages-family/raw/master/set_cuda.sh)
+```
+
+Setup manually
+
+```bash
+$ cd ~
+$ echo "export PATH=/usr/local/cuda/bin:\${PATH}" >> ${HOME}/.bashrc
+$ echo "export LD_LIBRARY_PATH=/usr/local/cuda/lib64:\${LD_LIBRARY_PATH}" >> ${HOME}/.bashrc
+$ echo "export CPATH=$CPATH:/usr/local/cuda/targets/aarch64-linux/include" >> ${HOME}/.bashrc
+$ echo "export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/cuda/targets/aarch64-linux/lib" >> {HOME}/.bashrc
+$ source ~/.bashrc
 ```
 
 
@@ -434,9 +447,33 @@ $ sudo apt-get update
 $ sudo apt-get install -y python python-pip libffi-dev libssl-dev
 $ sudo pip install docker-compose
 $ docker-compose -v
-
 ```
 
+### L4T-Docker
+
+NVIDIA L4T-Docker
+
+Official Repo: https://github.com/NVIDIA/nvidia-docker
+
+Install NVIDIA-Docker Runtime
+
+```bash
+$ sudo apt install -y nvidia-docker2
+$ sudo systemctl daemon-reload
+$ sudo systemctl restart docker
+$ docker info | grep nvidia
+```
+
+Verify NVIDIA-Runtime
+
+```bash
+$ docker run -it --runtime nvidia hikariai/l4t-base-r32.4.3:latest bash 
+$ cd samples/1_Utilities/deviceQuery
+$ make
+$ ./deviceQuery
+```
+
+Custom L4T-Docker Image is available [HERE](https://github.com/yqlbu/l4t-docker)
 
 
 <a name="docker"></a>
