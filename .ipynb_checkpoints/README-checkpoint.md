@@ -547,9 +547,9 @@ Official Website: [HERE](https://www.nomachine.com/download/download&id=111&s=AR
 
 ```bash
 $ cd ~
-$ wget https://download.nomachine.com/download/6.10/Arm/nomachine_6.10.12_1_arm64.deb
-$ sudo dpkg -i nomachine_6.10.12_1_arm64.deb
-$ rm rf nomachine_6.10.12_1_arm64.deb
+$ wget https://download.nomachine.com/download/6.11/Arm/nomachine_46.11.2_1_arm64.deb
+$ sudo dpkg -i nomachine_46.11.2_1_arm64.deb
+$ rm rf nomachine_46.11.2_1_arm64.deb
 ```
 
 <a name="nomachine"></a>
