@@ -67,6 +67,7 @@ Table of Contents
 * [ONNX](#onnx)
 * [Jetson Stats](#jetson-stats)
 * [VSCode](#vs-code-for-aarch64)
+* [CodeServer] (#code-server)
 * [Archiconda3](#archiconda3)
 * [OpenCV](#opencv)
 * [Pycharm](#pycharm)
@@ -318,6 +319,26 @@ $ sudo apt-get install -y code-oss
 ```
 
 <a name="vs-code-for-aarch64"></a>
+
+Code Server
+-----------
+
+Code-server is a Visual Studio Code instance running on a remote server accessible through any web browser. It allows you to code anywhere and on any device such as a tablet or laptop with a consistent integrated development environment (IDE)
+
+Installation Guide: [HERE](https://github.com/yqlbu/code-server)
+
+Quick Install:
+
+```bash
+$ docker run -d --name code-server \
+  -v /appdata/code-server:/data \
+  -p 8443:8443 \
+  --privileged \
+  --restart unless-stopped \
+  hikariai/code-server:latest
+```
+
+<a name="code-server"></a>
 
 Archiconda3
 -----------
