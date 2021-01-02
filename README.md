@@ -5,7 +5,7 @@
 ![](https://img.shields.io/static/v1?label=Python&message=3.6&color=red)
 
 
-*** Copy Right 2020 Kevin Yu. All rights reserved.
+*** CopyRight 2020 Kevin Yu. All rights reserved.
 
 *** Author: Kevin Yu
 
