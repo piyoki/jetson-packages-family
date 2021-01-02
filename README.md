@@ -117,7 +117,7 @@ To install other versions of PyTorch and Torchvision, please visit site [HERE](h
 Tensorflow
 ----------
 
-Python 3.6 + JetPack4.4
+Python 3.6 + JetPack 4.4
 
 ```bash
 sudo apt-get install libhdf5-serial-dev hdf5-tools libhdf5-dev zlib1g-dev zip libjpeg8-dev liblapack-dev libblas-dev gfortran
