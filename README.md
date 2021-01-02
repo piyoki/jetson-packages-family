@@ -338,6 +338,8 @@ $ docker run -d --name code-server \
   hikariai/code-server:latest
 ```
 
+The Web UI will be available at `http://localhost:8443`
+
 <a name="code-server"></a>
 
 Archiconda3
