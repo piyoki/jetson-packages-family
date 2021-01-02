@@ -5,11 +5,11 @@
 ![](https://img.shields.io/static/v1?label=Python&message=3.6&color=red)
 
 
-*** Copy Right 2020 Kevin Yu. All rights reserved.
+*** CopyRight 2020 Kevin Yu. All rights reserved.
 
 *** Author: Kevin Yu
 
-*** Update Time: 2020/07/30
+*** Update Time: 2020/01/02
 
 This repo aims to give you clear instructions on how to install packages on AArch64(ARM) Platform, especially in Jetson family. All the packages have been tested on Jetson AGX Xavier and Jetson Nano.
 
@@ -41,7 +41,7 @@ If you have not set CUDA Path yet, you might need to do so.
 Setup with script
 
 ```bash
-$ bash <(wget -qO- https://github.com/yqlbu/jetson-packages-family/raw/master/set_cuda.sh)
+$ wget -qO- https://github.com/yqlbu/jetson-packages-family/raw/master/set_cuda.sh | bash -
 ```
 
 Setup manually
@@ -80,27 +80,28 @@ Table of Contents
 Pytorch
 -------
 
-PyTorch v1.5.0 (JetPack 4.4)
+PyTorch v1.7.0 (JetPack 4.4)
 
 
-Python 3.6 - torch-1.5.0-cp36-cp36m-linux_aarch64.whl
+Python 3.6 - torch-1.7.0-cp36-cp36m-linux_aarch64.whl
 
 ```bash
-$ wget https://nvidia.box.com/shared/static/3ibazbiwtkl181n95n9em3wtrca7tdzp.whl -O torch-1.5.0-cp36-cp36m-linux_aarch64.whl
-$ sudo apt-get install python3-pip libopenblas-base libopenmpi-dev 
-$ pip3 install Cython
-$ pip3 install numpy torch-1.5.0-cp36-cp36m-linux_aarch64.whl
+wget https://nvidia.box.com/shared/static/wa34qwrwtk9njtyarwt5nvo6imenfy26.whl -O torch-1.7.0-cp36-cp36m-linux_aarch64.whl
+sudo apt-get install python3-pip libopenblas-base libopenmpi-dev 
+pip3 install Cython
+pip3 install numpy torch-1.7.0-cp36-cp36m-linux_aarch64.whl
 ```
 
 Torchvision v0.5.0 (compatible with PyTorch v1.4.0)
 
 ```bash
-$ sudo apt-get install libjpeg-dev zlib1g-dev
-$ git clone --branch v0.5.0 https://github.com/pytorch/vision torchvision
+$ sudo apt-get install libjpeg-dev zlib1g-dev libpython3-dev libavcodec-dev libavformat-dev libswscale-dev
+$ git clone --branch v0.8.1 https://github.com/pytorch/vision torchvision 
 $ cd torchvision
+$ export BUILD_VERSION=0.8.1  # where 0.x.0 is the torchvision version  
 $ sudo python3 setup.py install
-$ cd ../
-$ pip3 install 'pillow<7' # not needed for torchvision v0.5.0+
+$ cd ../  # attempting to load torchvision from build dir will result in import error
+$ pip install 'pillow<7' # always needed for Python 2.7, not needed torchvision v0.5.0+ with Python 3.6
 ```
 
 Verfication
@@ -109,7 +110,7 @@ Verfication
 $ python3 -c "import torch ; print(torch.__version__)"
 ```
 
-To install other versions of PyTorch and Torchvision, please visit site [HERE](https://forums.developer.nvidia.com/t/pytorch-for-jetson-nano-version-1-5-0-now-available/72048)
+To install other versions of PyTorch and Torchvision, please visit site [HERE](https://forums.developer.nvidia.com/t/pytorch-for-jetson-version-1-7-0-now-available/72048)
 
 <a name="pytorch"></a>
 
@@ -124,22 +125,9 @@ sudo apt-get install python3-pip
 sudo pip3 install -U pip
 sudo pip3 install -U pip testresources setuptools numpy==1.16.1 future==0.17.1 mock==3.0.5 h5py==2.9.0 keras_preprocessing==1.0.5 keras_applications==1.0.8 gast==0.2.2 futures protobuf pybind11
 # TF-2.x
-$ sudo pip3 install --pre --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v44 tensorflow==2.2.0+nv20.6
+$ sudo pip3 install --pre --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v44 tensorflow==2.3.1+nv20.12
 # TF-1.15
 $ sudo pip3 install --pre --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v44 ‘tensorflow<2’
-```
-
-Python 3.6 + JetPack4.3
-
-```bash
-$ sudo apt-get install libhdf5-serial-dev hdf5-tools libhdf5-dev zlib1g-dev zip libjpeg8-dev
-$ sudo apt-get install python3-pip
-$ sudo pip3 install -U pip
-$ sudo pip3 install -U numpy grpcio absl-py py-cpuinfo psutil portpicker six mock requests gast h5py astor termcolor protobuf keras-applications keras-preprocessing wrapt google-pasta
-# TF-2.x
-$ sudo pip3 install --pre --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v43 tensorflow==2.1.0+nv20.3
-# TF-1.15
-$ sudo pip3 install --pre --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v43 tensorflow==1.15.2+nv20.3
 ```
 
 To install other versions of Tensorflow, checkout the sites below:  
@@ -167,7 +155,7 @@ Python3 v3.6.9
 
 ### Scikit-learn
 
-Scikit-learn v0.23.1(Latest)
+Scikit-learn v0.24.0(Latest)
 
 ```bash
 $ pip3 install scikit-learn
@@ -177,7 +165,7 @@ $ pip3 install scikit-learn
 
 ### Scipy
 
-Scipy v1.4.1(Latest)
+Scipy v1.6.0(Latest)
 
 ```bash
 $ apt-get install libatlas-base-dev gfortran
@@ -188,7 +176,7 @@ $ pip3 install -U scipy --user
 
 ### Matplotlib
 
-Matplotlib v3.2.1(Latest)
+Matplotlib v3.3.3(Latest)
 
 ```bash
 $ sudo apt install libfreetype6-dev
@@ -209,7 +197,7 @@ pip3 install -U pycuda --user
 
 ### Jupyter Lab
 
-JupyterLab v2.1.4(Latest)
+JupyterLab v3.0.0(Latest)
 
 ```bash
 # install jupyter
@@ -240,7 +228,7 @@ $ pip3 install -U pillow --user
 
 ### Pandas
 
-Pandas v1.0.4(Latest)
+Pandas v1.2.0(Latest)
 
 ```bash
 $ pip3 install -U pandas --user
@@ -250,7 +238,7 @@ $ pip3 install -U pandas --user
 
 ### Numpy
 
-Numpy v1.18.5(Latest)
+Numpy v1.19.4(Latest)
 
 ```bash
 $ pip3 install -U numpy --user
@@ -260,7 +248,7 @@ $ pip3 install -U numpy --user
 
 ### Seaborn
 
-Seaborn v0.10.1(Latest)
+Seaborn v0.11.1(Latest)
 
 ```bash
 $ pip3 install -U seaborn --user
@@ -315,7 +303,6 @@ Jetson-stats is a package to monitoring and control your NVIDIA Jetson [Xavier N
 
 ```bash
 $ cd ~
-$ sudo -H pip install jetson-stats
 $ sudo -H pip install -U jetson-stats
 ```
 
@@ -371,9 +358,9 @@ OpenCV v4.1.1 (Python2.7/3.6+ JetPack4.3/4.4)
 ```bash
 $ cd ~
 # purge old-version
-$ bash <(wget -qO- https://github.com/yqlbu/jetson-packages-family/raw/master/OpenCV/remove.sh)
+$ wget -qO- https://github.com/yqlbu/jetson-packages-family/raw/master/OpenCV/remove.shc | bash -
 # install
-$ bash <(wget -qO- https://github.com/yqlbu/jetson-packages-family/raw/master/OpenCV/install_opencv4.1.1_jetson.sh)
+$ wget -qO- https://github.com/yqlbu/jetson-packages-family/raw/master/OpenCV/install_opencv4.1.1_jetson.sh | bash -
 
 ```
 
@@ -440,7 +427,7 @@ $ sudo systemctl status docker
 
 ### Docker-compose
 
-Docker-compose v1.26.0(Latest)
+Docker-compose v1.27.4(Latest)
 
 ```
 $ sudo apt-get update
@@ -544,13 +531,6 @@ Nomachine ARMv8 (compatible with Jetson Devices)
 NoMachine is a free, cross-platform, serverless remot e desktop tool that lets you setup a remote desktop server on your computer using the NX video protocol. The client can be used to connect to the server from anywhere in the world.
 
 Official Website: [HERE](https://www.nomachine.com/download/download&id=111&s=ARM)
-
-```bash
-$ cd ~
-$ wget https://download.nomachine.com/download/6.11/Arm/nomachine_46.11.2_1_arm64.deb
-$ sudo dpkg -i nomachine_46.11.2_1_arm64.deb
-$ rm rf nomachine_46.11.2_1_arm64.deb
-```
 
 <a name="nomachine"></a>
 
