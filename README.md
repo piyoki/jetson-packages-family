@@ -41,7 +41,7 @@ If you have not set CUDA Path yet, you might need to do so.
 Setup with script
 
 ```bash
-$ bash <(wget -qO- https://github.com/yqlbu/jetson-packages-family/raw/master/set_cuda.sh)
+$ wget -qO- https://github.com/yqlbu/jetson-packages-family/raw/master/set_cuda.sh | bash -
 ```
 
 Setup manually
