@@ -67,7 +67,7 @@ Table of Contents
 * [ONNX](#onnx)
 * [Jetson Stats](#jetson-stats)
 * [VSCode](#vs-code-for-aarch64)
-* [CodeServer] (#code-server)
+* [CodeServer](#code-server)
 * [Archiconda3](#archiconda3)
 * [OpenCV](#opencv)
 * [Pycharm](#pycharm)
