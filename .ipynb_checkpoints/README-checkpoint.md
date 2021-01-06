@@ -217,6 +217,7 @@ Install with Docker
 
 ```
 $ docker run --name jupyterlab -d \
+  -e TZ=Asia/Shanghai \
   -p 8888:8888 \
   -v /appdata/jupyterlab:/opt/app/data \
   hikariai/jupyterlab:latest
