@@ -213,6 +213,15 @@ $ source ~/.bashrc
 $ jupyter lab -V
 ```
 
+Install with Docker
+
+```
+$ docker run --name jupyterlab -d \
+  -p 8888:8888 \
+  -v /appdata/jupyterlab:/opt/app/data \
+  hikariai/jupyterlab:latest
+```
+
 Usage Guide: [https://github.com/yqlbu/jetson_lab](https://github.com/yqlbu/jetson_lab)
 
 <a name="jupyter-lab"></a>
