@@ -9,7 +9,7 @@
 
 *** Author: Kevin Yu
 
-*** Update Time: 2020/01/02
+*** Update Time: 2020/01/07
 
 This repo aims to give you clear instructions on how to install packages on AArch64(ARM) Platform, especially in Jetson family. All the packages have been tested on Jetson AGX Xavier and Jetson Nano.
 
@@ -62,6 +62,15 @@ Table of Contents
 * [Pytorch](#pytorch)
 * [Tensorflow](#tensorflow)
 * [Machine Learning](#machine-learning)
+    * [Scikit Learn](#scikit-learn)
+    * [Scipy](#scipy)
+    * [Matplotlib](#matplotlib)
+    * [Pycuda](pycuda)
+    * [Jupyter Lab](#jupyter-lab)
+    * [Pillow](#pillow)
+    * [Pandas](#pandas)
+    * [Numpy](#numpy)
+    * [Seaborn](#seaborn)
 * [LLVM](#llvm)
 * [Numba](#numba)
 * [ONNX](#onnx)
@@ -221,6 +230,14 @@ $ docker run --name jupyterlab -d \
   -p 8888:8888 \
   -v /appdata/jupyterlab:/opt/app/data \
   hikariai/jupyterlab:latest
+```
+
+Run the app
+
+```bash
+$ jupyter lab --ip=* --port=8888 --no-browser --notebook-dir=/opt/app/data \
+  --allow-root --NotebookApp.token='' --NotebookApp.password='' \
+  --LabApp.terminado_settings='{"shell_command": ["/bin/bash"]}'
 ```
 
 Usage Guide: [https://github.com/yqlbu/jetson_lab](https://github.com/yqlbu/jetson_lab)
