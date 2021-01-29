@@ -16,7 +16,7 @@ This repo aims to give you clear instructions on how to install packages on AArc
 
 
 ## Dependencies Installation
-Before performing any installation, you may need to install the following basic dependencies.
+Before performing any installation, you may need to install the following basic dependencies
 ```bash
 $ sudo apt-get install -y nano curl 
 $ sudo apt-get install -y python3-pip python3-dev
