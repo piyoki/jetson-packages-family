@@ -13,20 +13,21 @@
 
 This repo aims to give you clear instructions on how to install packages on AArch64(ARM) Platform, especially in Jetson family. All the packages have been tested on Jetson AGX Xavier and Jetson Nano.
 
-
-
 ## Dependencies Installation
+
 Before performing any installation, you may need to install the following basic dependencies
+
 ```bash
 $ sudo apt-get install -y nano curl 
-$ sudo apt-get install -y python3-pip python3-dev
-$ sudo apt-get install -y python-pip
-$ sudo apt-get install -y python-setuptools
-$ sudo apt-get install -y python3-setuptools
+# python3
+$ sudo apt-get install -y python3-pip python3-dev python3-setuptools
+# python2
+$ sudo apt-get install -y python-pip python-dev python-setuptools
 $ sudo apt-get install -y libcanberra-gtk0 libcanberra-gtk-module
 ```
 
 Python-pip
+
 ```bash
 $ pip3 install -U pip
 $ pip install -U pip
@@ -55,26 +56,40 @@ $ echo "export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/cuda/targets/aarch64-linux/
 $ source ~/.bashrc
 ```
 
+## Boot From SSD (Xavier Only)
 
-Table of Contents
+Compared with Jetson Nano, an important feature comes with Jetson Xavier NX and Jetson AGX Xavier is  that they come with the M.2 Key M connector. According to the third-party testing, the reading speed from my SSD is 7 times faster than the SD card. Thus, to boot from SSD will surely boost the performance of Jetson Xavier.
+
+[Guide to setup](https://www.seeedstudio.com/blog/2020/06/22/boot-jetson-xavier-from-m-2-ssd/)
+
+[Jetsonhacks RootOnNVMe repo](https://github.com/jetsonhacks/rootOnNVMe.git)
+
+## Fan Control
+
+A script that can control the PWM fan with the change of the CPU temperature of any Jetson Machine (Jetson Nano, Jetson TX1, TX2, Jetson Xavier)
+
+[Guide to setup](https://github.com/yqlbu/fan-control)
+
+Packages List
 -----------------
 
 * [Pytorch](#pytorch)
 * [Tensorflow](#tensorflow)
 * [Machine Learning](#machine-learning)
-    * [Scikit Learn](#scikit-learn)
-    * [Scipy](#scipy)
-    * [Matplotlib](#matplotlib)
-    * [Pycuda](pycuda)
-    * [Jupyter Lab](#jupyter-lab)
-    * [Pillow](#pillow)
-    * [Pandas](#pandas)
-    * [Numpy](#numpy)
-    * [Seaborn](#seaborn)
+  * [Scikit Learn](#scikit-learn)
+  * [Scipy](#scipy)
+  * [Matplotlib](#matplotlib)
+  * [Pycuda](pycuda)
+  * [Jupyter Lab](#jupyter-lab)
+  * [Pillow](#pillow)
+  * [Pandas](#pandas)
+  * [Numpy](#numpy)
+  * [Seaborn](#seaborn)
 * [LLVM](#llvm)
 * [Numba](#numba)
 * [ONNX](#onnx)
 * [Jetson Stats](#jetson-stats)
+* [Neovim Server](#neovim-server)
 * [VSCode](#vs-code-for-aarch64)
 * [CodeServer](#code-server)
 * [Archiconda3](#archiconda3)
@@ -171,8 +186,6 @@ Scikit-learn v0.24.0(Latest)
 $ pip3 install scikit-learn
 ```
 
-<a name="scikit-learn"></a>
-
 ### Scipy
 
 Scipy v1.6.0(Latest)
@@ -181,8 +194,6 @@ Scipy v1.6.0(Latest)
 $ apt-get install libatlas-base-dev gfortran
 $ pip3 install -U scipy --user
 ```
-
-<a name="scipy"></a>
 
 ### Matplotlib
 
@@ -193,8 +204,6 @@ $ sudo apt install libfreetype6-dev
 $ pip3 install -U matplotlib --user
 ```
 
-<a name="matplotlib"></a>
-
 ### Pycuda
 
 Pycuda v2019.1.2(Latest)
@@ -202,8 +211,6 @@ Pycuda v2019.1.2(Latest)
 ```bash
 pip3 install -U pycuda --user
 ```
-
-<a name="pycuda"></a>
 
 ### Jupyter Lab
 
@@ -242,8 +249,6 @@ $ jupyter lab --ip=* --port=8888 --no-browser --notebook-dir=/opt/app/data \
 
 Usage Guide: [https://github.com/yqlbu/jetson_lab](https://github.com/yqlbu/jetson_lab)
 
-<a name="jupyter-lab"></a>
-
 ### Pillow
 
 Pillow v5.1.0(Latest)
@@ -251,8 +256,6 @@ Pillow v5.1.0(Latest)
 ```bash
 $ pip3 install -U pillow --user
 ```
-
-<a name="pillow"></a>
 
 ### Pandas
 
@@ -262,8 +265,6 @@ Pandas v1.2.0(Latest)
 $ pip3 install -U pandas --user
 ```
 
-<a name="pandas"></a>
-
 ### Numpy
 
 Numpy v1.19.4(Latest)
@@ -271,8 +272,6 @@ Numpy v1.19.4(Latest)
 ```bash
 $ pip3 install -U numpy --user
 ```
-
-<a name="numpy"></a>
 
 ### Seaborn
 
@@ -298,8 +297,6 @@ $ sudo chmod 777 -R /usr/local/lib/python3.6/dist-packages/
 $ python3 setup.py install
 ```
 
-<a name="LLVM"></a>
-
 Numba
 -----
 
@@ -311,8 +308,6 @@ Numba v0.31 (Python3.6 + JetPack 4.3/4.4)
 $ pip3 install numba==0.31 --user
 ```
 
-<a name="Numba"></a>
-
 ONNX
 ----
 
@@ -322,7 +317,6 @@ ONNX v1.4.1 (Python3.6 + JetPack 4.3/4.4)
 $ sudo apt install protobuf-compiler libprotoc-dev
 $ pip install onnx==1.4.1
 ```
-<a name="Numba"></a>
 
 Jetson Stats
 ------------
@@ -334,8 +328,6 @@ $ sudo -H pip install -U jetson-stats
 $ sudo jtop
 ```
 
-<a name="jetson-stats"></a>
-
 VS Code for aarch64
 -------------------
 
@@ -344,8 +336,6 @@ $ cd ~
 $ curl -s https://packagecloud.io/install/repositories/swift-arm/vscode/script.deb.sh | sudo bash
 $ sudo apt-get install -y code-oss
 ```
-
-<a name="vs-code-for-aarch64"></a>
 
 Code Server
 -----------
@@ -366,8 +356,6 @@ $ docker run -d --name code-server \
 ```
 
 The Web UI will be available at `http://localhost:8443`
-
-<a name="code-server"></a>
 
 Archiconda3
 -----------
@@ -398,8 +386,6 @@ $ source ~/.bashrc
 
 Please checkout site [HERE](https://github.com/yqlbu/archiconda3) for usage guide.
 
-<a name="archiconda3"></a>
-
 OpenCV
 ------
 
@@ -419,8 +405,6 @@ $ bash <(wget -qO- https://github.com/yqlbu/jetson-packages-family/raw/master/Op
 ```bash
 $ wget https://github.com/yqlbu/jetson-packages-family/raw/master/OpenCV/install_opencv4.1.1_jetson.sh
 ```
-
-<a name="opencv"></a>
 
 Pycharm
 -------
@@ -454,13 +438,12 @@ $ echo 'export PATH=/home/'$USER'/pycharm-2019.3.4/bin:$PATH' >> .bashrc
 ```
 
 run
+
 ```bash
 $ pycharm
 ```
 
 *** **Notes:** You may find other versions [HERE](https://www.jetbrains.com/pycharm/download/other.html)
-
-<a name="pycharm"></a>
 
 Docker
 ------
@@ -512,9 +495,6 @@ $ ./deviceQuery
 
 Custom L4T-Docker Image is available [HERE](https://github.com/yqlbu/l4t-docker)
 
-
-<a name="docker"></a>
-
 Dlib
 ----
 
@@ -528,8 +508,6 @@ $ wget https://raw.githubusercontent.com/yqlbu/face_recognizer/master/setup.sh
 $ sudo chmod +x setup.sh
 $ ./setup.sh
 ```
-
-<a name="dlib"></a>
 
 LabelImg
 --------
@@ -547,8 +525,6 @@ $ make qt4py2
 $ python labelImg.py
 ```
 
-<a name="dlib"></a>
-
 Qt5
 ---
 
@@ -560,8 +536,6 @@ $ sudo apt-get install pyqt5*
 $ sudo apt install python3-pyqt5.qtsql
 ```
 
-<a name="qt5"></a>
-
 Kubernetes
 ----------
 
@@ -570,8 +544,6 @@ Kubernetes
 [K3S](https://rancher.com/blog/2019/why-k3s-is-the-future-of-k8s-at-the-edge/) is a lightweight Kubernetes distribution developed by Rancher Labs, perfect for Edge Computing use cases where compute resources may be somewhat limited.
 
 Installation and usage guide is available at [HERE](https://hikariai.net/cloud/kubernetes-edge-deployment/)
-
-<a name="kubernetes"></a>
 
 Nomachine
 ---------
@@ -582,9 +554,7 @@ NoMachine is a free, cross-platform, serverless remot e desktop tool that lets y
 
 Official Website: [HERE](https://www.nomachine.com/download/download&id=111&s=ARM)
 
-<a name="nomachine"></a>
-
 License
 -------
 
-[MIT License](https://github.com/yqlbu/jetson-packages-family/blob/master/LICENSE)
+[MIT License (C) Kevin Yu](https://github.com/yqlbu/jetson-packages-family/blob/master/LICENSE)
