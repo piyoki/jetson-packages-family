@@ -482,7 +482,7 @@ $ sudo systemctl status docker
 
 ### Docker-compose
 
-Docker-compose v1.27.4(Latest)
+Docker-compose v1.28.2(Latest)
 
 ```
 $ sudo apt-get update
