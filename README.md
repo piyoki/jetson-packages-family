@@ -30,7 +30,7 @@ Python-pip
 ```bash
 $ pip3 install -U pip
 $ pip install -U pip
-$ pip3 install setuptools wheel
+$ pip3 install setuptools wheel cython
 $ pip install setuptools wheel cython
 ```
 
@@ -330,8 +330,8 @@ Jetson Stats
 Jetson-stats is a package to monitoring and control your NVIDIA Jetson [Xavier NX, Nano, AGX Xavier, TX1, TX2] Works with all NVIDIA Jetson ecosystem.
 
 ```bash
-$ cd ~
 $ sudo -H pip install -U jetson-stats
+$ sudo jtop
 ```
 
 <a name="jetson-stats"></a>
