@@ -85,6 +85,7 @@ Packages List
   * [Pandas](#pandas)
   * [Numpy](#numpy)
   * [Seaborn](#seaborn)
+  * [ONNX](#onnx)
 * [LLVM](#llvm)
 * [Numba](#numba)
 * [ONNX](#onnx)
@@ -95,6 +96,8 @@ Packages List
 * [Archiconda3](#archiconda3)
 * [OpenCV](#opencv)
 * [Pycharm](#pycharm)
+* [Lazygit](#lazygit)
+* [Neofetch](#neofetch)
 * [Docker](#docker)
 * [Dlib](#dlib)
 * [LabelImg](#labelimg)
@@ -281,6 +284,15 @@ Seaborn v0.11.1(Latest)
 $ pip3 install -U seaborn --user
 ```
 
+### ONNX
+
+ONNX v1.4.1 (Python3.6 + JetPack 4.3/4.4)
+
+```bash
+$ sudo apt install protobuf-compiler libprotoc-dev
+$ pip install onnx==1.4.1
+```
+
 LLVM
 ----
 
@@ -306,16 +318,6 @@ Numba v0.31 (Python3.6 + JetPack 4.3/4.4)
 
 ```shell script
 $ pip3 install numba==0.31 --user
-```
-
-ONNX
-----
-
-ONNX v1.4.1 (Python3.6 + JetPack 4.3/4.4)
-
-```bash
-$ sudo apt install protobuf-compiler libprotoc-dev
-$ pip install onnx==1.4.1
 ```
 
 Jetson Stats
@@ -444,6 +446,26 @@ $ pycharm
 ```
 
 *** **Notes:** You may find other versions [HERE](https://www.jetbrains.com/pycharm/download/other.html)
+
+## Lazygit
+
+[Lazygit](https://github.com/jesseduffield/lazygit) is a simple terminal UI for git commands, written in Go with the gocui library.
+
+```bash
+$ sudo add-apt-repository ppa:lazygit-team/release
+$ sudo apt-get update
+$ sudo apt-get install lazygit
+```
+
+## Neofetch
+
+[Neofetch](https://github.com/dylanaraps/neofetch) is a cross-platform, simple shell script that scans for your system’s information and displays it in a terminal, together with an ASCII image or any desired image next to the output.
+
+```bash
+$ sudo add-apt-repository ppa:dawidd0811/neofetch
+$ sudo apt-get update
+$ sudo apt-get install neofecth
+```
 
 Docker
 ------
