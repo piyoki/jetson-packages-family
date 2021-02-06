@@ -554,7 +554,25 @@ NoMachine is a free, cross-platform, serverless remot e desktop tool that lets y
 
 Official Website: [HERE](https://www.nomachine.com/download/download&id=111&s=ARM)
 
+#### Change Resolution
+
+The desktop resolution is typically determined by the capabilities of the display that is attached to Jetson. If no display is attached, a default resolution of `640x480` is selected. To use a different resolution, edit
+`/etc/X11/xorg.conf` and append the following lines:
+
+```bash
+Section "Screen"
+   Identifier    "Default Screen"
+   Monitor       "Configured Monitor"
+   Device        "Tegra0"
+   SubSection "Display"
+       Depth    24
+       Virtual 1280 800 # Modify the resolution by editing these values
+   EndSubSection
+EndSection
+```
+
 License
 -------
 
 [MIT License (C) Kevin Yu](https://github.com/yqlbu/jetson-packages-family/blob/master/LICENSE)
+
