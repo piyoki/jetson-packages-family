@@ -358,6 +358,8 @@ $ docker run -d \
     hikariai/nvim-server:latest
 ```
 
+Wait for a couple seconds until the container finishes its bootstrap process, then visit http://localhost:6080/wetty
+
 VS Code for aarch64
 -------------------
 
