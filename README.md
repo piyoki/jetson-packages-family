@@ -90,7 +90,7 @@ Packages List
 * [Numba](#numba)
 * [ONNX](#onnx)
 * [Jetson Stats](#jetson-stats)
-* [Neovim Server](#neovim-server)
+* [NeoVim Server](#neovim-server)
 * [VSCode](#vs-code-for-aarch64)
 * [CodeServer](#code-server)
 * [Archiconda3](#archiconda3)
@@ -330,6 +330,34 @@ $ sudo -H pip install -U jetson-stats
 $ sudo jtop
 ```
 
+## NeoVim Server
+
+[NeoVim Server](https://github.com/yqlbu/neovim-server) is a containerized IDE-like text editor that runs on a web server.
+
+Docs: https://github.com/yqlbu/neovim-server/wiki
+
+Font Install: 
+
+```bash
+$ mkdir -p ~/.local/share/fonts
+$ cd ~/.local/share/fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
+```
+
+Quick Install: 
+
+```bash
+$ docker run -d \
+    --name nvim-server \
+    -p 6080:3000 \
+    -p 8090:8090 \
+    -v ~/workspace:/workspace \
+    -v /appdata/nvim-server:/config \
+    -e TZ=Asia/Shanghai \
+    -e USER=<USER> \
+    -e SECRET=<PASSWORD> \
+    hikariai/nvim-server:latest
+```
+
 VS Code for aarch64
 -------------------
 
@@ -482,7 +510,7 @@ $ sudo systemctl status docker
 
 ### Docker-compose
 
-Docker-compose v1.28.2(Latest)
+Docker-compose v1.27.4(Latest)
 
 ```
 $ sudo apt-get update
