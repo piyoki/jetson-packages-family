@@ -557,15 +557,6 @@ $ sudo systemctl restart docker
 $ docker info | grep nvidia
 ```
 
-Verify NVIDIA-Runtime
-
-```bash
-$ docker run -it --runtime nvidia hikariai/l4t-base-r32.4.3:latest bash 
-$ cd samples/1_Utilities/deviceQuery
-$ make
-$ ./deviceQuery
-```
-
 Custom L4T-Docker Image is available [HERE](https://github.com/yqlbu/l4t-docker)
 
 Dlib
