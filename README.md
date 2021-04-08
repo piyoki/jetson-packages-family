@@ -428,7 +428,7 @@ $ cd ~
 # purge old-version
 $ sudo apt-get purge libopencv*
 # install
-$ bash <(wget -qO- https://github.com/yqlbu/jetson-packages-family/raw/master/OpenCV/install_opencv4.1.1_jetson.sh)
+$ sudo bash <(wget -qO- https://github.com/yqlbu/jetson-packages-family/raw/master/OpenCV/install_opencv4.1.1_jetson.sh)
 
 ```
 
