@@ -496,7 +496,7 @@ $ sudo apt-get update
 $ sudo apt-get install neofecth
 ```
 
-### Docker
+## Docker
 
 Docker is basically a container engine which uses the Linux Kernel features like namespaces and control groups to create containers on top of an operating system and automates application deployment on the container. Docker uses Copy-on-write union file system for its backend storage.
 
@@ -508,7 +508,7 @@ $ sudo systemctl enable docker
 $ sudo systemctl status docker 
 ```
 
-#### Docker Default Runtime
+### Docker Default Runtime
 
 To enable access to the CUDA compiler (nvcc) during `docker build` operations, add `"default-runtime": "nvidia"` to your `/etc/docker/daemon.json` configuration file before attempting to build the containers:
 
