@@ -525,6 +525,12 @@ To enable access to the CUDA compiler (nvcc) during `docker build` operations, a
 }
 ```
 
+Verify if the default runtime is set to nvidia:
+
+```bash
+$ docker info | grep nvidia
+```
+
 ### Docker-compose
 
 Docker-compose v1.27.4(Latest)
