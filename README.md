@@ -96,6 +96,7 @@ Packages List
 * [OpenCV](#opencv)
 * [Pycharm](#pycharm)
 * [Lazygit](#lazygit)
+* [Ranger](#ranger)
 * [Neofetch](#neofetch)
 * [Docker](#docker)
 * [Dlib](#dlib)
