@@ -103,6 +103,7 @@ Packages List
 * [Dlib](#dlib)
 * [LabelImg](#labelimg)
 * [Qt5](#qt5)
+* [Typora](#typora)
 * [Kubernetes](#kubernetes)
 * [Nomachine](#nomachine)
 
@@ -619,6 +620,23 @@ Qt is used for developing graphical user interfaces (GUIs) and multi-platform ap
 $ sudo apt-get install qt5-default qtcreator -y
 $ sudo apt-get install pyqt5*
 $ sudo apt install python3-pyqt5.qtsql
+```
+
+## Typora
+
+[Typora](https://typora.io/) gives you a seamless experience as both a reader and a writer. It removes the preview window, mode switcher, syntax symbols of markdown source code, and all other unnecessary distractions. Instead, it provides a real live preview feature to help you concentrate on the content itself.
+
+```bash
+# or use
+# sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys BA300B7755AFCFAE
+wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
+
+# add Typora's repository
+sudo add-apt-repository 'deb https://typora.io/linux ./'
+sudo apt-get update
+
+# install typora
+sudo apt-get install typora
 ```
 
 Kubernetes
