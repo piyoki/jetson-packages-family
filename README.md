@@ -184,15 +184,11 @@ Python3 v3.6.9
 
 ### Scikit-learn
 
-Scikit-learn v0.24.0(Latest)
-
 ```bash
 $ pip3 install scikit-learn
 ```
 
 ### Scipy
-
-Scipy v1.6.0(Latest)
 
 ```bash
 $ apt-get install libatlas-base-dev gfortran
@@ -201,16 +197,12 @@ $ pip3 install -U scipy --user
 
 ### Matplotlib
 
-Matplotlib v3.3.3(Latest)
-
 ```bash
 $ sudo apt install libfreetype6-dev
 $ pip3 install -U matplotlib --user
 ```
 
 ### Pycuda
-
-Pycuda v2019.1.2(Latest)
 
 ```bash
 pip3 install -U pycuda --user
@@ -255,15 +247,11 @@ Usage Guide: [https://github.com/yqlbu/jetson_lab](https://github.com/yqlbu/jets
 
 ### Pillow
 
-Pillow v5.1.0(Latest)
-
 ```bash
 $ pip3 install -U pillow --user
 ```
 
 ### Pandas
-
-Pandas v1.2.0(Latest)
 
 ```bash
 $ pip3 install -U pandas --user
@@ -271,15 +259,11 @@ $ pip3 install -U pandas --user
 
 ### Numpy
 
-Numpy v1.19.4(Latest)
-
 ```bash
 $ pip3 install -U numpy --user
 ```
 
 ### Seaborn
-
-Seaborn v0.11.1(Latest)
 
 ```bash
 $ pip3 install -U seaborn --user
@@ -287,7 +271,7 @@ $ pip3 install -U seaborn --user
 
 ### ONNX
 
-ONNX v1.4.1 (Python3.6 + JetPack 4.3/4.4)
+ONNX v1.4.1 (Python3.6.9 + JetPack 4.3/4.4/4.5)
 
 ```bash
 $ sudo apt install protobuf-compiler libprotoc-dev
@@ -297,7 +281,7 @@ $ pip install onnx==1.4.1
 LLVM
 ----
 
-LLVM v3.9 (Python3.6 + JetPack 4.3/4.4)
+LLVM v3.9 (Python3.6 + JetPack 4.3/4.4/4.5)
 
 ```bash
 $ sudo apt-get install llvm-3.9
@@ -313,7 +297,7 @@ $ python3 setup.py install
 Numba
 -----
 
-Numba v0.31 (Python3.6 + JetPack 4.3/4.4)
+Numba v0.31 (Python3.6 + JetPack 4.3/4.4/4.5)
 
 *** Notes: Numba requires **LLVM** pre-built, so please check out the instructions for [LLVM](#LLVM) and have it installed before installing Numba.
 
@@ -422,7 +406,7 @@ Please checkout site [HERE](https://github.com/yqlbu/archiconda3) for usage guid
 OpenCV
 ------
 
-OpenCV v4.1.1 (Python2.7/3.6+ JetPack4.3/4.4)
+OpenCV v4.1.1 (Python2.7/3.6+ JetPack4.3/4.4/4.5)
 
 ```bash
 $ cd ~
