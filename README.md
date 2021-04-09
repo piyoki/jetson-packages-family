@@ -96,6 +96,7 @@ Packages List
 * [OpenCV](#opencv)
 * [Pycharm](#pycharm)
 * [Lazygit](#lazygit)
+* [Lsd](#lsd)
 * [Ranger](#ranger)
 * [Neofetch](#neofetch)
 * [Docker](#docker)
@@ -493,6 +494,15 @@ $ sudo apt-get install lazygit
 
 ```bash
 $ pip install ranger-fm
+```
+
+## Lsd
+
+[Lsd](https://github.com/Peltoche/lsd) -- The next gen ls command
+
+Download the latest `.deb` package from the [release page](https://github.com/Peltoche/lsd/releases) and install it via:
+```bash
+sudo dpkg -i lsd_0.20.1_arm64.deb # adapt version number and architecture
 ```
 
 Sample config is available [HERE](https://github.com/yqlbu/dotfiles/tree/master/ranger/.config/ranger)
