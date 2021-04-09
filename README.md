@@ -486,6 +486,16 @@ $ sudo apt-get update
 $ sudo apt-get install lazygit
 ```
 
+## Ranger
+
+[Ranger](https://github.com/ranger/ranger) is a console file manager with VI key bindings. It provides a minimalistic and nice curses interface with a view on the directory hierarchy. It ships with rifle, a file launcher that is good at automatically finding out which program to use for what file type.
+
+```bash
+$ pip install ranger-fm
+```
+
+Sample config is available [HERE](https://github.com/yqlbu/dotfiles/tree/master/ranger/.config/ranger)
+
 ## Neofetch
 
 [Neofetch](https://github.com/dylanaraps/neofetch) is a cross-platform, simple shell script that scans for your system’s information and displays it in a terminal, together with an ASCII image or any desired image next to the output.
