@@ -496,6 +496,8 @@ $ sudo apt-get install lazygit
 $ pip install ranger-fm
 ```
 
+Sample config is available [HERE](https://github.com/yqlbu/dotfiles/tree/master/ranger/.config/ranger)
+
 ## Lsd
 
 [Lsd](https://github.com/Peltoche/lsd) -- The next gen ls command
@@ -504,8 +506,6 @@ Download the latest `.deb` package from the [release page](https://github.com/Pe
 ```bash
 sudo dpkg -i lsd_0.20.1_arm64.deb # adapt version number and architecture
 ```
-
-Sample config is available [HERE](https://github.com/yqlbu/dotfiles/tree/master/ranger/.config/ranger)
 
 ## Neofetch
 
