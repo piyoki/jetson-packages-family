@@ -48,7 +48,6 @@ $ wget -qO- https://github.com/yqlbu/jetson-packages-family/raw/master/set_cuda.
 Setup manually
 
 ```bash
-$ cd ~
 $ echo "export PATH=/usr/local/cuda/bin:\${PATH}" >> ${HOME}/.bashrc
 $ echo "export LD_LIBRARY_PATH=/usr/local/cuda/lib64:\${LD_LIBRARY_PATH}" >> ${HOME}/.bashrc
 $ echo "export CPATH=$CPATH:/usr/local/cuda/targets/aarch64-linux/include" >> ${HOME}/.bashrc
@@ -349,7 +348,6 @@ VS Code for aarch64
 -------------------
 
 ```bash
-$ cd ~
 $ curl -s https://packagecloud.io/install/repositories/swift-arm/vscode/script.deb.sh | sudo bash
 $ sudo apt-get install -y code-oss
 ```
@@ -409,7 +407,6 @@ OpenCV
 OpenCV v4.1.1 (Python2.7/3.6+ JetPack4.3/4.4/4.5)
 
 ```bash
-$ cd ~
 # purge old-version
 $ sudo apt-get purge libopencv*
 # install
@@ -506,7 +503,6 @@ $ sudo apt-get install neofecth
 Docker is basically a container engine which uses the Linux Kernel features like namespaces and control groups to create containers on top of an operating system and automates application deployment on the container. Docker uses Copy-on-write union file system for its backend storage.
 
 ```bash
-$ cd ~
 $ sudo wget -qO- https://get.docker.com/ | sh
 $ sudo usermod -aG docker $USER
 $ sudo systemctl enable docker 
