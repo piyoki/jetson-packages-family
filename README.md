@@ -70,7 +70,7 @@ A script that can control the PWM fan with the change of the CPU temperature of 
 [Guide to setup](https://github.com/yqlbu/fan-control)
 
 Packages List
------------------
+-------------
 
 * [Pytorch](#pytorch)
 * [Tensorflow](#tensorflow)
@@ -105,8 +105,7 @@ Packages List
 * [Kubernetes](#kubernetes)
 * [Nomachine](#nomachine)
 
-Pytorch
--------
+## Pytorch
 
 PyTorch v1.7.0 (JetPack 4.4)
 
@@ -142,8 +141,7 @@ To install other versions of PyTorch and Torchvision, please visit site [HERE](h
 
 <a name="pytorch"></a>
 
-Tensorflow
-----------
+## Tensorflow
 
 Python 3.6 + JetPack 4.4
 
@@ -166,8 +164,7 @@ Jetson Nano: [HERE](https://forums.developer.nvidia.com/t/official-tensorflow-fo
 
 <a name="tensorflow"></a>
 
-Machine Learning
-----------------
+## Machine Learning
 
 Python3 v3.6.9
 
@@ -277,8 +274,7 @@ $ sudo apt install protobuf-compiler libprotoc-dev
 $ pip install onnx==1.4.1
 ```
 
-LLVM
-----
+## LLVM
 
 LLVM v3.9 (Python3.6 + JetPack 4.3/4.4/4.5)
 
@@ -293,8 +289,7 @@ $ sudo chmod 777 -R /usr/local/lib/python3.6/dist-packages/
 $ python3 setup.py install
 ```
 
-Numba
------
+## Numba
 
 Numba v0.31 (Python3.6 + JetPack 4.3/4.4/4.5)
 
@@ -304,8 +299,7 @@ Numba v0.31 (Python3.6 + JetPack 4.3/4.4/4.5)
 $ pip3 install numba==0.31 --user
 ```
 
-Jetson Stats
-------------
+## Jetson Stats
 
 Jetson-stats is a package to monitoring and control your NVIDIA Jetson [Xavier NX, Nano, AGX Xavier, TX1, TX2] Works with all NVIDIA Jetson ecosystem.
 
@@ -344,16 +338,14 @@ $ docker run -d \
 
 Wait for a couple seconds until the container finishes its bootstrap process, then visit http://localhost:6080/wetty
 
-VS Code for aarch64
--------------------
+## VS Code for aarch64
 
 ```bash
 $ curl -s https://packagecloud.io/install/repositories/swift-arm/vscode/script.deb.sh | sudo bash
 $ sudo apt-get install -y code-oss
 ```
 
-Code Server
------------
+## Code Server
 
 Code-server is a Visual Studio Code instance running on a remote server accessible through any web browser. It allows you to code anywhere and on any device such as a tablet or laptop with a consistent integrated development environment (IDE)
 
@@ -372,8 +364,7 @@ $ docker run -d --name code-server \
 
 The Web UI will be available at `http://localhost:8443`
 
-Archiconda3
------------
+## Archiconda3
 
 Archiconda3 is a distribution of conda for 64 bit ARM. Anaconda is a free and open-source distribution of the Python and R programming languages for scientific computing (data science, machine learning applications, large-scale data processing, predictive analytics, etc.), that aims to simplify package management and deployment. Like Virtualenv, Anaconda also uses the concept of creating environments so as to isolate different libraries and versions.
 
@@ -401,8 +392,7 @@ $ source ~/.bashrc
 
 Please checkout site [HERE](https://github.com/yqlbu/archiconda3) for usage guide.
 
-OpenCV
-------
+## OpenCV
 
 OpenCV v4.1.1 (Python2.7/3.6+ JetPack4.3/4.4/4.5)
 
@@ -420,8 +410,7 @@ $ sudo bash <(wget -qO- https://github.com/yqlbu/jetson-packages-family/raw/mast
 $ wget https://github.com/yqlbu/jetson-packages-family/raw/master/OpenCV/install_opencv4.1.1_jetson.sh
 ```
 
-Pycharm
--------
+## Pycharm
 
 PyCharm is an integrated development environment (IDE) used in computer programming, specifically for the Python language. It is developed by the Czech company JetBrains.
 
@@ -560,8 +549,7 @@ $ docker info | grep nvidia
 
 Custom L4T-Docker Image is available [HERE](https://github.com/yqlbu/l4t-docker)
 
-Dlib
-----
+## Dlib
 
 DLib is an open source C++ library implementing a variety of machine learning algorithms, including classification, regression, clustering, data transformation, and structured prediction. ... K-Means clustering, Bayesian Networks, and many others.
 
@@ -574,8 +562,7 @@ $ sudo chmod +x setup.sh
 $ ./setup.sh
 ```
 
-LabelImg
---------
+## LabelImg
 
 [LabelImg](https://github.com/tzutalin/labelImg) is a graphical image annotation tool and label object bounding boxes in images.
 
@@ -590,8 +577,7 @@ $ make qt4py2
 $ python labelImg.py
 ```
 
-Qt5
----
+## Qt5
 
 Qt is used for developing graphical user interfaces (GUIs) and multi-platform applications that run on all major desktop platforms and most mobile or embedded platforms. Most GUI programs created with Qt have a native-looking interface, in which case Qt is classified as a widget toolkit.
 
@@ -601,8 +587,7 @@ $ sudo apt-get install pyqt5*
 $ sudo apt install python3-pyqt5.qtsql
 ```
 
-Kubernetes
-----------
+## Kubernetes
 
 [Kubernetes](https://kubernetes.io/docs/concepts/architecture/) has rapidly become a key ingredient in edge computing. With Kubernetes, companies can run containers at the edge in a way that maximizes resources, makes testing easier, and allows DevOps teams to move faster and more effectively as these organizations consume and analyze more data in the field.
 
@@ -610,8 +595,7 @@ Kubernetes
 
 Installation and usage guide is available at [HERE](https://hikariai.net/cloud/kubernetes-edge-deployment/)
 
-Nomachine
----------
+## Nomachine
 
 Nomachine ARMv8 (compatible with Jetson Devices)
 
@@ -636,8 +620,7 @@ Section "Screen"
 EndSection
 ```
 
-License
--------
+## License
 
 [MIT License (C) Kevin Yu](https://github.com/yqlbu/jetson-packages-family/blob/master/LICENSE)
 
