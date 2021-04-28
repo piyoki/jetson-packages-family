@@ -32,13 +32,15 @@ $ sudo apt-get install -y libcanberra-gtk0 libcanberra-gtk-module
 Python-pip
 
 ```bash
+# pip3
 $ pip3 install -U pip
 $ pip install -U pip
+# pip
 $ pip3 install setuptools wheel cython
 $ pip install setuptools wheel cython
 ```
 
-**Notes:** If you wish to set `python3` as your default python compiler and pip package manager, please do the following:
+**Notes:** If you wish to set `python3` as your default python compiler and `pip` package manager, please do the following:
 
 ```bash
 # python
