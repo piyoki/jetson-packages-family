@@ -110,26 +110,26 @@ Packages List
 
 ## Pytorch
 
-PyTorch v1.7.0 (JetPack 4.4)
+PyTorch v1.8.0 (JetPack 4.4 +)
 
 
-Python 3.6 - torch-1.7.0-cp36-cp36m-linux_aarch64.whl
+Python 3.6 - torch-1.8.0-cp36-cp36m-linux_aarch64.whl
 
 ```bash
-wget https://nvidia.box.com/shared/static/wa34qwrwtk9njtyarwt5nvo6imenfy26.whl -O torch-1.7.0-cp36-cp36m-linux_aarch64.whl
-sudo apt-get install python3-pip libopenblas-base libopenmpi-dev 
-pip3 install Cython
-pip3 install numpy torch-1.7.0-cp36-cp36m-linux_aarch64.whl
+$ wget https://nvidia.box.com/shared/static/p57jwntv436lfrd78inwl7iml6p13fzh.whl -O torch-1.8.0-cp36-cp36m-linux_aarch64.whl
+$ sudo apt-get install python3-pip libopenblas-base libopenmpi-dev 
+$ pip3 install Cython
+$ pip3 install numpy torch-1.8.0-cp36-cp36m-linux_aarch64.whl
 ```
 
 Torchvision v0.5.0 (compatible with PyTorch v1.4.0)
 
 ```bash
 $ sudo apt-get install libjpeg-dev zlib1g-dev libpython3-dev libavcodec-dev libavformat-dev libswscale-dev
-$ git clone --branch v0.8.1 https://github.com/pytorch/vision torchvision 
+$ git clone --branch <version> https://github.com/pytorch/vision torchvision   # see below for version of torchvision to download
 $ cd torchvision
-$ export BUILD_VERSION=0.8.1  # where 0.x.0 is the torchvision version  
-$ sudo python3 setup.py install
+$ export BUILD_VERSION=0.x.0  # where 0.x.0 is the torchvision version  
+$ python3 setup.py install --user
 $ cd ../  # attempting to load torchvision from build dir will result in import error
 $ pip install 'pillow<7' # always needed for Python 2.7, not needed torchvision v0.5.0+ with Python 3.6
 ```
@@ -146,17 +146,23 @@ To install other versions of PyTorch and Torchvision, please visit site [HERE](h
 
 ## Tensorflow
 
-Python 3.6 + JetPack 4.4
+Python 3.6 + JetPack 4.5
 
 ```bash
 sudo apt-get install libhdf5-serial-dev hdf5-tools libhdf5-dev zlib1g-dev zip libjpeg8-dev liblapack-dev libblas-dev gfortran
 sudo apt-get install python3-pip
-sudo pip3 install -U pip
-sudo pip3 install -U pip testresources setuptools numpy==1.16.1 future==0.17.1 mock==3.0.5 h5py==2.9.0 keras_preprocessing==1.0.5 keras_applications==1.0.8 gast==0.2.2 futures protobuf pybind11
+sudo pip3 install -U pip testresources setuptools==49.6.0
+sudo pip3 install -U numpy==1.16.1 future==0.18.2 mock==3.0.5 h5py==2.10.0 keras_preprocessing==1.1.1 keras_applications==1.0.8 gast==0.2.2 futures protobuf pybind11
 # TF-2.x
-$ sudo pip3 install --pre --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v44 tensorflow==2.3.1+nv20.12
+$ sudo pip3 install --pre --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v45 tensorflow
 # TF-1.15
-$ sudo pip3 install --pre --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v44 ‘tensorflow<2’
+$ sudo pip3 install --pre --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v45 ‘tensorflow<2’
+```
+
+If you meet error when installing h5py, please run this command to solve the dependency:
+
+```bash
+$ sudo apt-get install libhdf5-serial-dev hdf5-tools
 ```
 
 To install other versions of Tensorflow, checkout the sites below:  
