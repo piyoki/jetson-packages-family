@@ -38,6 +38,17 @@ $ pip3 install setuptools wheel cython
 $ pip install setuptools wheel cython
 ```
 
+**Notes:** If you wish to set `python3` as your default python compiler and pip package manager, please do the following:
+
+```bash
+# python
+$ sudo rm -rf /usr/bin/python && sudo ln -s /usr/bin/python3 /usr/bin/python
+$ which python
+# pip
+$ sudo rm -rf /usr/bin/pip && sudo ln -s /usr/bin/pip3 /usr/bin/pip
+$ which pip
+```
+
 ## Set CUDA Path
 
 If you have not set CUDA Path yet, you might need to do so.
