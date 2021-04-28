@@ -2,6 +2,9 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![](https://img.shields.io/static/v1?label=Device&message=Jetson(ARMv8)&color=orange)
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fyqlbu%jetson-packages-family&count_bg=%2304BBC4&title_bg=%23555555&icon=&icon_color=%2300DBD8&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
+[![Lines](https://img.shields.io/tokei/lines/github/yqlbu/UnraidStudio)](https://img.shields.io/tokei/lines/github/yqlbu/jetson-packages-family)
+[![lastcommit](https://img.shields.io/github/last-commit/yqlbu/jetson-packages-family)](https://img.shields.io/github/last-commit/yqlbu/jetson-packages-family)
 ![](https://img.shields.io/static/v1?label=Python&message=3.6&color=red)
 
 
