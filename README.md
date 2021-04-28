@@ -490,6 +490,13 @@ $ sudo apt-get install lazygit
 $ pip install ranger-fm
 ```
 
+(Optional) Install ranger devicons
+
+```bash
+$ git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
+$ echo "default_linemode devicons" >> $HOME/.config/ranger/rc.conf
+```
+
 Sample config is available [HERE](https://github.com/yqlbu/dotfiles/tree/master/ranger/.config/ranger)
 
 ## Lsd
