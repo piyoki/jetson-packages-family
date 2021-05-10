@@ -218,8 +218,8 @@ $ pip3 install -U scipy --user
 ### Matplotlib
 
 ```bash
-$ sudo apt install libfreetype6-dev
-$ pip3 install -U matplotlib --user
+$ sudo apt install libfreetype6-dev -y
+$ sudo apt install python3-matplotlib -y
 ```
 
 ### Pycuda
