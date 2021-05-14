@@ -546,6 +546,12 @@ To enable access to the CUDA compiler (nvcc) during `docker build` operations, a
 }
 ```
 
+Restart Docker Daemon
+
+```bash
+$ sudo systemctl restart docker
+```
+
 Verify if the default runtime is set to nvidia:
 
 ```bash
