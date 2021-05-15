@@ -1,18 +1,17 @@
 # Jetson Packages Family
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-![](https://img.shields.io/static/v1?label=Device&message=Jetson(ARMv8)&color=orange)
+![](<https://img.shields.io/static/v1?label=Device&message=Jetson(ARMv8)&color=orange>)
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fyqlbu%2Fjetson-packages-family&count_bg=%23723DC8&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
 [![Lines](https://img.shields.io/tokei/lines/github/yqlbu/jetson-packages-family)](https://img.shields.io/tokei/lines/github/yqlbu/jetson-packages-family)
 [![lastcommit](https://img.shields.io/github/last-commit/yqlbu/jetson-packages-family)](https://img.shields.io/github/last-commit/yqlbu/jetson-packages-family)
 ![](https://img.shields.io/static/v1?label=Python&message=3.6&color=red)
 
+\*\*\* CopyRight 2020 Kevin Yu. All rights reserved.
 
-*** CopyRight 2020 Kevin Yu. All rights reserved.
+\*\*\* Author: Kevin Yu
 
-*** Author: Kevin Yu
-
-*** Update Time: 2021/04/28
+\*\*\* Update Time: 2021/04/28
 
 This repo aims to give you clear instructions on how to install packages on AArch64(ARM) Platform, especially in Jetson family. All the packages have been tested on Jetson AGX Xavier and Jetson Nano.
 
@@ -23,7 +22,7 @@ Feel free to check out my site [hikariai.net](https://hikariai.net) for more cut
 Before performing any installation, you may need to install the following basic dependencies
 
 ```bash
-$ sudo apt-get install -y nano curl 
+$ sudo apt-get install -y nano curl
 # python3
 $ sudo apt-get install -y python3-pip python3-dev python3-setuptools
 # python2
@@ -75,7 +74,7 @@ $ source ~/.bashrc
 
 ## Boot From SSD (Xavier Only)
 
-Compared with Jetson Nano, an important feature comes with Jetson Xavier NX and Jetson AGX Xavier is  that they come with the M.2 Key M connector. According to the third-party testing, the reading speed from my SSD is 7 times faster than the SD card. Thus, to boot from SSD will surely boost the performance of Jetson Xavier.
+Compared with Jetson Nano, an important feature comes with Jetson Xavier NX and Jetson AGX Xavier is that they come with the M.2 Key M connector. According to the third-party testing, the reading speed from my SSD is 7 times faster than the SD card. Thus, to boot from SSD will surely boost the performance of Jetson Xavier.
 
 [Guide to setup](https://www.seeedstudio.com/blog/2020/06/22/boot-jetson-xavier-from-m-2-ssd/)
 
@@ -87,52 +86,52 @@ A script that can control the PWM fan with the change of the CPU temperature of 
 
 [Guide to setup](https://github.com/yqlbu/fan-control)
 
-Packages List
--------------
+## Packages List
 
-* [Pytorch](#pytorch)
-* [Tensorflow](#tensorflow)
-* [Machine Learning](#machine-learning)
-  * [Scikit Learn](#scikit-learn)
-  * [Scipy](#scipy)
-  * [Matplotlib](#matplotlib)
-  * [Pycuda](pycuda)
-  * [Jupyter Lab](#jupyter-lab)
-  * [Pillow](#pillow)
-  * [Pandas](#pandas)
-  * [Numpy](#numpy)
-  * [Seaborn](#seaborn)
-  * [ONNX](#onnx)
-* [LLVM](#llvm)
-* [Numba](#numba)
-* [Jetson Stats](#jetson-stats)
-* [NeoVim Server](#neovim-server)
-* [VSCode](#vs-code-for-aarch64)
-* [CodeServer](#code-server)
-* [Archiconda3](#archiconda3)
-* [OpenCV](#opencv)
-* [Pycharm](#pycharm)
-* [Lazygit](#lazygit)
-* [Lsd](#lsd)
-* [Ranger](#ranger)
-* [Neofetch](#neofetch)
-* [Docker](#docker)
-* [Dlib](#dlib)
-* [LabelImg](#labelimg)
-* [Qt5](#qt5)
-* [Kubernetes](#kubernetes)
-* [Nomachine](#nomachine)
+- [Pytorch](#pytorch)
+- [Tensorflow](#tensorflow)
+- [Machine Learning](#machine-learning)
+  - [Scikit Learn](#scikit-learn)
+  - [Scipy](#scipy)
+  - [Matplotlib](#matplotlib)
+  - [Pycuda](pycuda)
+  - [Jupyter Lab](#jupyter-lab)
+  - [Pillow](#pillow)
+  - [Pandas](#pandas)
+  - [Numpy](#numpy)
+  - [Seaborn](#seaborn)
+  - [ONNX](#onnx)
+- [LLVM](#llvm)
+- [Numba](#numba)
+- [Jetson Stats](#jetson-stats)
+- [NeoVim Server](#neovim-server)
+- [VSCode](#vs-code-for-aarch64)
+- [CodeServer](#code-server)
+- [Archiconda3](#archiconda3)
+- [OpenCV](#opencv)
+- [Pycharm](#pycharm)
+- [Lazygit](#lazygit)
+- [Lsd](#lsd)
+- [ctop](#ctop)
+- [bashtop](#bashtop)
+- [Ranger](#ranger)
+- [Neofetch](#neofetch)
+- [Docker](#docker)
+- [Dlib](#dlib)
+- [LabelImg](#labelimg)
+- [Qt5](#qt5)
+- [Kubernetes](#kubernetes)
+- [Nomachine](#nomachine)
 
 ## Pytorch
 
 PyTorch v1.8.0 (JetPack 4.4 +)
 
-
 Python 3.6 - torch-1.8.0-cp36-cp36m-linux_aarch64.whl
 
 ```bash
 $ wget https://nvidia.box.com/shared/static/p57jwntv436lfrd78inwl7iml6p13fzh.whl -O torch-1.8.0-cp36-cp36m-linux_aarch64.whl
-$ sudo apt-get install python3-pip libopenblas-base libopenmpi-dev 
+$ sudo apt-get install python3-pip libopenblas-base libopenmpi-dev
 $ pip3 install Cython
 $ pip3 install numpy torch-1.8.0-cp36-cp36m-linux_aarch64.whl
 ```
@@ -143,7 +142,7 @@ Torchvision v0.5.0 (compatible with PyTorch v1.4.0)
 $ sudo apt-get install libjpeg-dev zlib1g-dev libpython3-dev libavcodec-dev libavformat-dev libswscale-dev
 $ git clone --branch <version> https://github.com/pytorch/vision torchvision   # see below for version of torchvision to download
 $ cd torchvision
-$ export BUILD_VERSION=0.x.0  # where 0.x.0 is the torchvision version  
+$ export BUILD_VERSION=0.x.0  # where 0.x.0 is the torchvision version
 $ python3 setup.py install --user
 $ cd ../  # attempting to load torchvision from build dir will result in import error
 $ pip install 'pillow<7' # always needed for Python 2.7, not needed torchvision v0.5.0+ with Python 3.6
@@ -180,7 +179,7 @@ If you meet error when installing h5py, please run this command to solve the dep
 $ sudo apt-get install libhdf5-serial-dev hdf5-tools
 ```
 
-To install other versions of Tensorflow, checkout the sites below:  
+To install other versions of Tensorflow, checkout the sites below:
 
 Jetson Xavier: [HERE](https://forums.developer.nvidia.com/t/official-tensorflow-for-jetson-agx-xavier/65523)
 
@@ -192,15 +191,15 @@ Jetson Nano: [HERE](https://forums.developer.nvidia.com/t/official-tensorflow-fo
 
 Python3 v3.6.9
 
-* [Scikit Learn](#scikit-learn)
-* [Scipy](#scipy)
-* [Matplotlib](#matplotlib)
-* [Pycuda](pycuda)
-* [Jupyter Lab](#jupyter-lab)
-* [Pillow](#pillow)
-* [Pandas](#pandas)
-* [Numpy](#numpy)
-* [Seaborn](#seaborn)
+- [Scikit Learn](#scikit-learn)
+- [Scipy](#scipy)
+- [Matplotlib](#matplotlib)
+- [Pycuda](pycuda)
+- [Jupyter Lab](#jupyter-lab)
+- [Pillow](#pillow)
+- [Pandas](#pandas)
+- [Numpy](#numpy)
+- [Seaborn](#seaborn)
 
 ### Scikit-learn
 
@@ -317,7 +316,7 @@ $ python3 setup.py install
 
 Numba v0.31 (Python3.6 + JetPack 4.3/4.4/4.5)
 
-*** Notes: Numba requires **LLVM** pre-built, so please check out the instructions for [LLVM](#LLVM) and have it installed before installing Numba.
+**\* Notes: Numba requires **LLVM\*\* pre-built, so please check out the instructions for [LLVM](#LLVM) and have it installed before installing Numba.
 
 ```shell script
 $ pip3 install numba==0.31 --user
@@ -338,14 +337,14 @@ $ sudo jtop
 
 Docs: https://github.com/yqlbu/neovim-server/wiki
 
-Font Install: 
+Font Install:
 
 ```bash
 $ mkdir -p ~/.local/share/fonts
 $ cd ~/.local/share/fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
 ```
 
-Quick Install: 
+Quick Install:
 
 ```bash
 $ docker run -d \
@@ -428,7 +427,7 @@ $ sudo bash <(wget -qO- https://github.com/yqlbu/jetson-packages-family/raw/mast
 
 ```
 
-*** You may modify the script to install custom version of OpenCV
+\*\*\* You may modify the script to install custom version of OpenCV
 
 ```bash
 $ wget https://github.com/yqlbu/jetson-packages-family/raw/master/OpenCV/install_opencv4.1.1_jetson.sh
@@ -470,7 +469,7 @@ run
 $ pycharm
 ```
 
-*** **Notes:** You may find other versions [HERE](https://www.jetbrains.com/pycharm/download/other.html)
+**\* **Notes:\*\* You may find other versions [HERE](https://www.jetbrains.com/pycharm/download/other.html)
 
 ## Lazygit
 
@@ -504,8 +503,26 @@ Sample config is available [HERE](https://github.com/yqlbu/dotfiles/tree/master/
 [Lsd](https://github.com/Peltoche/lsd) -- The next gen ls command
 
 Download the latest `.deb` package from the [release page](https://github.com/Peltoche/lsd/releases) and install it via:
+
 ```bash
 sudo dpkg -i lsd_0.20.1_arm64.deb # adapt version number and architecture
+```
+
+## Ctop
+
+```bash
+# echo "deb http://packages.azlux.fr/debian/ buster main" | sudo tee /etc/apt/sources.list.d/azlux.list
+# wget -qO - https://azlux.fr/repo.gpg.key | sudo apt-key add -
+# sudo apt update
+# sudo apt install docker-ctop
+```
+
+## Bashtop
+
+```
+$ sudo add-apt-repository ppa:bashtop-monitor/bashtop
+$ sudo apt update
+$ sudo apt install bashtop
 ```
 
 ## Neofetch
@@ -525,8 +542,8 @@ Docker is basically a container engine which uses the Linux Kernel features like
 ```bash
 $ sudo wget -qO- https://get.docker.com/ | sh
 $ sudo usermod -aG docker $USER
-$ sudo systemctl enable docker 
-$ sudo systemctl status docker 
+$ sudo systemctl enable docker
+$ sudo systemctl status docker
 ```
 
 ### Docker Default Runtime
@@ -535,14 +552,14 @@ To enable access to the CUDA compiler (nvcc) during `docker build` operations, a
 
 ```json
 {
-    "runtimes": {
-        "nvidia": {
-            "path": "nvidia-container-runtime",
-            "runtimeArgs": []
-        }
-    },
+  "runtimes": {
+    "nvidia": {
+      "path": "nvidia-container-runtime",
+      "runtimeArgs": []
+    }
+  },
 
-    "default-runtime": "nvidia"
+  "default-runtime": "nvidia"
 }
 ```
 
@@ -660,4 +677,3 @@ EndSection
 ## License
 
 [MIT License (C) Kevin Yu](https://github.com/yqlbu/jetson-packages-family/blob/master/LICENSE)
-
