@@ -113,6 +113,7 @@ A script that can control the PWM fan with the change of the CPU temperature of 
 - [Lazygit](#lazygit)
 - [Lsd](#lsd)
 - [Ctop](#ctop)
+- [Cointop](#cointop)
 - [Bashtop](#bashtop)
 - [Ranger](#ranger)
 - [Neofetch](#neofetch)
@@ -517,6 +518,16 @@ sudo dpkg -i lsd_0.20.1_arm64.deb # adapt version number and architecture
 # wget -qO - https://azlux.fr/repo.gpg.key | sudo apt-key add -
 # sudo apt update
 # sudo apt install docker-ctop
+```
+
+## Cointop
+
+[Cointop](https://github.com/miguelmota/cointop) is is a fast and lightweight interactive terminal based UI application for tracking and monitoring cryptocurrency coin stats in real-time.
+
+Docs: [HERE](https://docs.cointop.sh/)
+
+```bash
+$ curl -o- https://raw.githubusercontent.com/miguelmota/cointop/master/install.sh | bash
 ```
 
 ## Bashtop
