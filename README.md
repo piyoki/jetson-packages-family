@@ -510,6 +510,8 @@ sudo dpkg -i lsd_0.20.1_arm64.deb # adapt version number and architecture
 
 ## Ctop
 
+[Ctop](https://github.com/bcicen/ctop*) is a Top-like interface for container metrics. Ctop provides a concise and condensed overview of real-time metrics for multiple containers.
+
 ```bash
 # echo "deb http://packages.azlux.fr/debian/ buster main" | sudo tee /etc/apt/sources.list.d/azlux.list
 # wget -qO - https://azlux.fr/repo.gpg.key | sudo apt-key add -
@@ -518,6 +520,8 @@ sudo dpkg -i lsd_0.20.1_arm64.deb # adapt version number and architecture
 ```
 
 ## Bashtop
+
+[Bashtop](https://github.com/aristocratos/bashtop) Resource monitor that shows usage and stats for processor, memory, disks, network and processes.
 
 ```
 $ sudo add-apt-repository ppa:bashtop-monitor/bashtop
