@@ -115,6 +115,7 @@ A script that can control the PWM fan with the change of the CPU temperature of 
 - [Ctop](#ctop)
 - [Cointop](#cointop)
 - [Bashtop](#bashtop)
+- [Httpie](#httpie)
 - [Ranger](#ranger)
 - [Neofetch](#neofetch)
 - [Docker](#docker)
@@ -538,6 +539,14 @@ $ curl -o- https://raw.githubusercontent.com/miguelmota/cointop/master/install.s
 $ sudo add-apt-repository ppa:bashtop-monitor/bashtop
 $ sudo apt update
 $ sudo apt install bashtop
+```
+
+## Httpie
+
+[Httpie](https://github.com/httpie/httpie) is a command-line HTTP client. Its goal is to make CLI interaction with web services as human-friendly as possible. HTTPie is designed for testing, debugging, and generally interacting with APIs & HTTP servers. The http & https commands allow for creating and sending arbitrary HTTP requests. They use simple and natural syntax and provide formatted and colorized output.
+
+```bash
+$ apt install httpie -y
 ```
 
 ## Neofetch
