@@ -318,7 +318,7 @@ $ python3 setup.py install
 
 Numba v0.31 (Python3.6 + JetPack 4.3/4.4/4.5)
 
-**\* Notes: Numba requires **LLVM\*\* pre-built, so please check out the instructions for [LLVM](#LLVM) and have it installed before installing Numba.
+**Notes: Numba requires **LLVM\*\* pre-built, so please check out the instructions for [LLVM](#LLVM) and have it installed before installing Numba.
 
 ```shell script
 $ pip3 install numba==0.31 --user
@@ -364,6 +364,8 @@ $ docker run -d \
 Wait for a couple seconds until the container finishes its bootstrap process, then visit http://localhost:6080/wetty
 
 ## VS Code for aarch64
+
+[Visual Studio Code](https://code.visualstudio.com/) is a code editor redefined and optimized for building and debugging modern web and cloud applications.
 
 ```bash
 $ curl -s https://packagecloud.io/install/repositories/swift-arm/vscode/script.deb.sh | sudo bash
@@ -429,7 +431,7 @@ $ sudo bash <(wget -qO- https://github.com/yqlbu/jetson-packages-family/raw/mast
 
 ```
 
-\*\*\* You may modify the script to install custom version of OpenCV
+Notes: You may modify the script to install custom version of OpenCV
 
 ```bash
 $ wget https://github.com/yqlbu/jetson-packages-family/raw/master/OpenCV/install_opencv4.1.1_jetson.sh
@@ -471,7 +473,7 @@ run
 $ pycharm
 ```
 
-**\* **Notes:\*\* You may find other versions [HERE](https://www.jetbrains.com/pycharm/download/other.html)
+Notes: You may find other versions [HERE](https://www.jetbrains.com/pycharm/download/other.html)
 
 ## Lazygit
 
@@ -502,7 +504,7 @@ Sample config is available [HERE](https://github.com/yqlbu/dotfiles/tree/master/
 
 ## Lsd
 
-[Lsd](https://github.com/Peltoche/lsd) -- The next gen ls command
+[Lsd](https://github.com/Peltoche/lsd) is the next gen ls command
 
 Download the latest `.deb` package from the [release page](https://github.com/Peltoche/lsd/releases) and install it via:
 
