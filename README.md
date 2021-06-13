@@ -584,7 +584,6 @@ To enable access to the CUDA compiler (nvcc) during `docker build` operations, a
       "runtimeArgs": []
     }
   },
-  // enable buildkit
   "features": {
     "buildkit": true
   },
