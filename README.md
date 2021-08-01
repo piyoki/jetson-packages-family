@@ -11,7 +11,7 @@
 
 \*\*\* Author: Kevin Yu
 
-\*\*\* Update Time: 2021/05/15
+\*\*\* Update Time: 2021/08/02
 
 This repo aims to give you clear instructions on how to install packages on AArch64(ARM) Platform, especially in Jetson family. All the packages have been tested on Jetson AGX Xavier and Jetson Nano.
 
@@ -191,7 +191,7 @@ Jetson Nano: [HERE](https://forums.developer.nvidia.com/t/official-tensorflow-fo
 
 ## Machine Learning
 
-Python3 v3.6.9
+Python3 `v3.6.9`
 
 - [Scikit Learn](#scikit-learn)
 - [Scipy](#scipy)
@@ -397,9 +397,7 @@ Archiconda3 is a distribution of conda for 64 bit ARM. Anaconda is a free and op
 
 ```bash
 $ cd ${HOME}
-$ wget https://github.com/Archiconda/build-tools/releases/download/0.2.3/Archiconda3-0.2.3-Linux-aarch64.sh
-$ sudo sh Archiconda3-0.2.3-Linux-aarch64.sh
-$ rm -rf Archiconda3-0.2.3-Linux-aarch64.sh
+$ curl -fsSL https://github.com/Archiconda/build-tools/releases/download/0.2.3/Archiconda3-0.2.3-Linux-aarch64.sh | sudo bash -
 $ cd ~
 $ sudo chown -R $USER archiconda3/
 $ export "PATH=~/archiconda3/bin:$PATH" >> ~/.bashrc
@@ -701,6 +699,22 @@ Section "Screen"
    EndSubSection
 EndSection
 ```
+
+## Update Logs
+
+<details><summary>Aug-02-2021</summary>
+
+</br>
+
+### Added
+
+- `Update Logs` section
+
+### Updated
+
+- `Archiconda3` to [v0.2.3](https://github.com/Archiconda/build-tools/releases/tag/0.2.3)
+
+</p></details>
 
 ## License
 
