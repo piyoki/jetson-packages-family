@@ -704,8 +704,6 @@ EndSection
 
 <details><summary>Aug-02-2021</summary>
 
-</br>
-
 ### Added
 
 - `Update Logs` section
