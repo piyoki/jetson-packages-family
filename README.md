@@ -607,8 +607,8 @@ $ docker info | grep nvidia
 
 ```
 $ sudo apt-get update
-$ sudo apt-get install -y python python-pip libffi-dev libssl-dev
-$ sudo pip install docker-compose
+$ sudo apt-get install -y python3 python3-pip libffi-dev libssl-dev
+$ sudo pip3 install docker-compose
 $ docker-compose -v
 ```
 
@@ -701,6 +701,12 @@ EndSection
 ```
 
 ## Update Logs
+
+<details><summary>Aug-27-2021</summary>
+
+### Updated
+
+- Use `pip3` to install `docker-compose` 
 
 <details><summary>Aug-02-2021</summary>
 
