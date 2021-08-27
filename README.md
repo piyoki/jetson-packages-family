@@ -708,6 +708,8 @@ EndSection
 
 - Use `pip3` to install `docker-compose` 
 
+</p></details>
+
 <details><summary>Aug-02-2021</summary>
 
 ### Added
