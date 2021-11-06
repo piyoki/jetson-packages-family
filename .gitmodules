@@ -1,0 +1,3 @@
+[submodule "src/themes/compose"]
+	path = src/themes/compose
+	url = git@github.com:onweru/compose.git
