@@ -710,7 +710,7 @@ EndSection
 
 ### Updated
 
-- Use `pip3` to install `docker-compose` 
+- Use `pip3` to install `docker-compose`
 
 </p></details>
 
