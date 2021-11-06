@@ -7,15 +7,19 @@
 [![lastcommit](https://img.shields.io/github/last-commit/yqlbu/jetson-packages-family)](https://img.shields.io/github/last-commit/yqlbu/jetson-packages-family)
 ![](https://img.shields.io/static/v1?label=Python&message=3.6&color=red)
 
-\*\*\* CopyRight 2020-2021 Kevin Yu. All rights reserved.
+CopyRight 2020-2021 Hikari AI. All rights reserved.
 
-\*\*\* Author: Kevin Yu
+Collaborator: Kevin Yu (@yqlbu), Shi Kun (@kunish)
 
-\*\*\* Update Time: 2021/08/27
+Update Time: 2021/11/06
 
 This repo aims to give you clear instructions on how to install packages on AArch64(ARM) Platform, especially in Jetson family. All the packages have been tested on Jetson AGX Xavier and Jetson Nano.
 
 Feel free to check out my site [hikariai.net](https://hikariai.net) for more cutting-edge information about `Microservices` and `Edge Computing`
+
+## Pre-Commit
+
+This repo uses [pre-commit](https://github.com/pre-commit/pre-commit) for managing and maintaining multi-language preo-commit hooks.
 
 ## Dependencies Installation
 
@@ -706,7 +710,7 @@ EndSection
 
 ### Updated
 
-- Use `pip3` to install `docker-compose` 
+- Use `pip3` to install `docker-compose`
 
 </p></details>
 
