@@ -11,8 +11,6 @@ CopyRight 2020-2022 Hikari AI. All rights reserved.
 
 Collaborator: Kevin Yu (@yqlbu), Shi Kun (@kunish)
 
-Update Time: 2021/11/06
-
 This repo aims to give you clear instructions on how to install packages on AArch64(ARM) Platform, especially in Jetson family. All the packages have been tested on Jetson AGX Xavier and Jetson Nano.
 
 Feel free to check out my site [hikariai.net](https://hikariai.net) for more cutting-edge information about `Microservices` and `Edge Computing`
