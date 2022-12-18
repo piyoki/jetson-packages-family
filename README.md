@@ -12,6 +12,8 @@
     <img src="https://custom-icon-badges.herokuapp.com/github/last-commit/yqlbu/jetson-packages-family?logo=history&logoColor=white" alt="lastcommit"/>
 </p>
 
+---
+
 CopyRight 2020-2022 Hikari AI. All rights reserved.
 
 Collaborator: Kevin Yu (@yqlbu), Shi Kun (@kunish)
