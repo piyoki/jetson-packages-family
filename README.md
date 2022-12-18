@@ -7,7 +7,7 @@
 [![lastcommit](https://img.shields.io/github/last-commit/yqlbu/jetson-packages-family)](https://img.shields.io/github/last-commit/yqlbu/jetson-packages-family)
 ![](https://img.shields.io/static/v1?label=Python&message=3.6&color=red)
 
-CopyRight 2020-2021 Hikari AI. All rights reserved.
+CopyRight 2020-2022 Hikari AI. All rights reserved.
 
 Collaborator: Kevin Yu (@yqlbu), Shi Kun (@kunish)
 
@@ -232,8 +232,6 @@ pip3 install -U pycuda --user
 
 ### Jupyter Lab
 
-JupyterLab v3.0.0(Latest)
-
 ```bash
 # install jupyter
 $ pip3 install jupyterlab
@@ -377,20 +375,7 @@ $ sudo apt-get install -y code-oss
 
 Code-server is a Visual Studio Code instance running on a remote server accessible through any web browser. It allows you to code anywhere and on any device such as a tablet or laptop with a consistent integrated development environment (IDE)
 
-Installation Guide: [HERE](https://github.com/yqlbu/code-server)
-
-Quick Install:
-
-```bash
-$ docker run -d --name code-server \
-  -v /appdata/code-server:/data \
-  -p 8443:8443 \
-  --privileged \
-  --restart unless-stopped \
-  hikariai/code-server:latest
-```
-
-The Web UI will be available at `http://localhost:8443`
+Installation Guide: [[HERE](https://github.com/cdr/code-server)
 
 ## Archiconda3
 
@@ -540,6 +525,17 @@ $ curl -o- https://raw.githubusercontent.com/miguelmota/cointop/master/install.s
 $ sudo add-apt-repository ppa:bashtop-monitor/bashtop
 $ sudo apt update
 $ sudo apt install bashtop
+```
+
+## Gotop
+
+[Gotop](https://github.com/cjbassi/gotop) A terminal based graphical activity monitor inspired by gtop and vtop
+
+```bash
+# install
+$ curl -fsSL git.io/gotop.sh | sudo bash
+# uninstall 
+sudo rm -f /usr/local/bin/gotop
 ```
 
 ## Httpie
@@ -703,11 +699,21 @@ EndSection
 
 ## Update Logs
 
+<details><summary>Dec-18-2022</summary>
+
+### Updated
+
+- [x] Add `gotop` installation guide
+- [x] Drop `python2` support
+- [x] Update `code-server` installation guide
+
+</p></details>
+
 <details><summary>Aug-27-2021</summary>
 
 ### Updated
 
-- Use `pip3` to install `docker-compose`
+- [x] Use `pip3` to install `docker-compose`
 
 </p></details>
 
@@ -715,7 +721,7 @@ EndSection
 
 ### Added
 
-- `Update Logs` section
+- [x] Update `Logs` section
 
 ### Updated
 
