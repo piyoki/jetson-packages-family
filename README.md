@@ -1,11 +1,16 @@
-# Jetson Packages Family
+<h1 align="center">Jetson Packages Family 🏠</h1>
+<p align="center">
+    <em>A collection of AWESOME Tools tailored to NVIDIA Jetson Devices</em>
+</p>
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-![](<https://img.shields.io/static/v1?label=Device&message=Jetson(ARMv8)&color=orange>)
-[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fyqlbu%2Fjetson-packages-family&count_bg=%23723DC8&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
-[![Lines](https://img.shields.io/tokei/lines/github/yqlbu/jetson-packages-family)](https://img.shields.io/tokei/lines/github/yqlbu/jetson-packages-family)
-[![lastcommit](https://img.shields.io/github/last-commit/yqlbu/jetson-packages-family)](https://img.shields.io/github/last-commit/yqlbu/jetson-packages-family)
-![](https://img.shields.io/static/v1?label=Python&message=3.6&color=red)
+<p align="center">
+    <img src="https://custom-icon-badges.herokuapp.com/github/license/yqlbu/jetson-packages-family?logo=law&color=orange" alt="License"/>
+    <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fyqlbu%2Fjetson-packages-family&count_bg=%23723DC8&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false" alt="Hits"/>
+    <img src="https://custom-icon-badges.herokuapp.com/badge/kubernetes-v1.23.6-navy.svg?logo=kubernetes&logoColor=white" alt="Docker">
+    <img src="https://custom-icon-badges.herokuapp.com/badge/docker-v20.10-blue.svg?logo=docker&logoColor=white" alt="Docker">
+    <img src="https://custom-icon-badges.herokuapp.com/github/issues-pr-closed/yqlbu/jetson-packages-family?color=purple&logo=git-pull-request&logoColor=white"/>
+    <img src="https://custom-icon-badges.herokuapp.com/github/last-commit/yqlbu/jetson-packages-family?logo=history&logoColor=white" alt="lastcommit"/>
+</p>
 
 CopyRight 2020-2022 Hikari AI. All rights reserved.
 
@@ -13,7 +18,7 @@ Collaborator: Kevin Yu (@yqlbu), Shi Kun (@kunish)
 
 This repo aims to give you clear instructions on how to install packages on AArch64(ARM) Platform, especially in Jetson family. All the packages have been tested on Jetson AGX Xavier and Jetson Nano.
 
-Feel free to check out my site [hikariai.net](https://hikariai.net) for more cutting-edge information about `Microservices` and `Edge Computing`
+Feel free to check out my site [hikariai.net](https://www.hikariai.net) for more cutting-edge information about `Microservices` and `Edge Computing`
 
 ## Pre-Commit
 
@@ -113,6 +118,7 @@ A script that can control the PWM fan with the change of the CPU temperature of 
 - [Lsd](#lsd)
 - [Ctop](#ctop)
 - [Cointop](#cointop)
+- [Gotop](#gotop)
 - [Bashtop](#bashtop)
 - [Httpie](#httpie)
 - [Ranger](#ranger)
@@ -515,16 +521,6 @@ Docs: [HERE](https://docs.cointop.sh/)
 $ curl -o- https://raw.githubusercontent.com/miguelmota/cointop/master/install.sh | bash
 ```
 
-## Bashtop
-
-[Bashtop](https://github.com/aristocratos/bashtop) Resource monitor that shows usage and stats for processor, memory, disks, network and processes.
-
-```
-$ sudo add-apt-repository ppa:bashtop-monitor/bashtop
-$ sudo apt update
-$ sudo apt install bashtop
-```
-
 ## Gotop
 
 [Gotop](https://github.com/cjbassi/gotop) A terminal based graphical activity monitor inspired by gtop and vtop
@@ -534,6 +530,16 @@ $ sudo apt install bashtop
 $ curl -fsSL git.io/gotop.sh | sudo bash
 # uninstall 
 sudo rm -f /usr/local/bin/gotop
+```
+
+## Bashtop
+
+[Bashtop](https://github.com/aristocratos/bashtop) Resource monitor that shows usage and stats for processor, memory, disks, network and processes.
+
+```
+$ sudo add-apt-repository ppa:bashtop-monitor/bashtop
+$ sudo apt update
+$ sudo apt install bashtop
 ```
 
 ## Httpie
