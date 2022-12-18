@@ -677,7 +677,7 @@ $ sudo apt install python3-pyqt5.qtsql
 
 [K3S](https://rancher.com/blog/2019/why-k3s-is-the-future-of-k8s-at-the-edge/) is a lightweight Kubernetes distribution developed by Rancher Labs, perfect for Edge Computing use cases where compute resources may be somewhat limited.
 
-Installation and usage guide is available at [HERE](https://www.hikariai.net/cloud/kubernetes-edge-deployment/)
+Installation and usage guide is available at [HERE](https://www.hikariai.net/blog/18-cross-architecture-kubernetes-with-edge-devices-using-hybrid-cloud-strategy/)
 
 ## Nomachine
 
