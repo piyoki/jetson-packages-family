@@ -6,7 +6,6 @@
 <p align="center">
     <img src="https://custom-icon-badges.herokuapp.com/github/license/yqlbu/jetson-packages-family?logo=law&color=orange" alt="License"/>
     <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fyqlbu%2Fjetson-packages-family&count_bg=%23723DC8&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false" alt="Hits"/>
-    <img src="https://img.shields.io/static/v1?label=Device&message=Jetson(ARMv8)&color=orange" alt="Jetson">
     <img src="https://custom-icon-badges.herokuapp.com/badge/kubernetes-v1.23.6-navy.svg?logo=kubernetes&logoColor=white" alt="Docker">
     <img src="https://custom-icon-badges.herokuapp.com/badge/docker-v20.10-blue.svg?logo=docker&logoColor=white" alt="Docker">
     <img src="https://custom-icon-badges.herokuapp.com/github/issues-pr-closed/yqlbu/jetson-packages-family?color=purple&logo=git-pull-request&logoColor=white"/>
